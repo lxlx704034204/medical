@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bben.bedcard.mapper.bedcard.TDrugsDoseMapper">
+  <resultMap id="BaseResultMap" type="com.bben.bedcard.model.bedcard.TDrugsDose">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="medication_record_id" jdbcType="INTEGER" property="medicationRecordId" />
+    <result column="drug_name" jdbcType="VARCHAR" property="drugName" />
+    <result column="breakfast_consumption" jdbcType="VARCHAR" property="breakfastConsumption" />
+    <result column="lunch_consumption" jdbcType="VARCHAR" property="lunchConsumption" />
+    <result column="dinner_consumption" jdbcType="VARCHAR" property="dinnerConsumption" />
+    <result column="before_sleep_consumption" jdbcType="VARCHAR" property="beforeSleepConsumption" />
+    <result column="other" jdbcType="VARCHAR" property="other" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, medication_record_id, drug_name, breakfast_consumption, lunch_consumption, dinner_consumption, 
+    before_sleep_consumption, other, status, description, create_time, create_by, update_time, 
+    update_by
+  </sql>
+  <select id="selectByExample" parameterType="com.bben.bedcard.model.bedcard.TDrugsDoseExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_drugs_dose
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_drugs_dose
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_drugs_dose
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.bben.bedcard.model.bedcard.TDrugsDoseExample">
+    delete from t_drugs_dose
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.bben.bedcard.model.bedcard.TDrugsDose">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_drugs_dose (medication_record_id, drug_name, breakfast_consumption, 
+      lunch_consumption, dinner_consumption, before_sleep_consumption, 
+      other, status, description, 
+      create_time, create_by, update_time, 
+      update_by)
+    values (#{medicationRecordId,jdbcType=INTEGER}, #{drugName,jdbcType=VARCHAR}, #{breakfastConsumption,jdbcType=VARCHAR}, 
+      #{lunchConsumption,jdbcType=VARCHAR}, #{dinnerConsumption,jdbcType=VARCHAR}, #{beforeSleepConsumption,jdbcType=VARCHAR}, 
+      #{other,jdbcType=VARCHAR}, #{status,jdbcType=TINYINT}, #{description,jdbcType=VARCHAR}, 
+      #{createTime,jdbcType=TIMESTAMP}, #{createBy,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, 
+      #{updateBy,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.bben.bedcard.model.bedcard.TDrugsDose">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_drugs_dose
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="medicationRecordId != null">
+        medication_record_id,
+      </if>
+      <if test="drugName != null">
+        drug_name,
+      </if>
+      <if test="breakfastConsumption != null">
+        breakfast_consumption,
+      </if>
+      <if test="lunchConsumption != null">
+        lunch_consumption,
+      </if>
+      <if test="dinnerConsumption != null">
+        dinner_consumption,
+      </if>
+      <if test="beforeSleepConsumption != null">
+        before_sleep_consumption,
+      </if>
+      <if test="other != null">
+        other,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="createBy != null">
+        create_by,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="updateBy != null">
+        update_by,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="medicationRecordId != null">
+        #{medicationRecordId,jdbcType=INTEGER},
+      </if>
+      <if test="drugName != null">
+        #{drugName,jdbcType=VARCHAR},
+      </if>
+      <if test="breakfastConsumption != null">
+        #{breakfastConsumption,jdbcType=VARCHAR},
+      </if>
+      <if test="lunchConsumption != null">
+        #{lunchConsumption,jdbcType=VARCHAR},
+      </if>
+      <if test="dinnerConsumption != null">
+        #{dinnerConsumption,jdbcType=VARCHAR},
+      </if>
+      <if test="beforeSleepConsumption != null">
+        #{beforeSleepConsumption,jdbcType=VARCHAR},
+      </if>
+      <if test="other != null">
+        #{other,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createBy != null">
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateBy != null">
+        #{updateBy,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.bben.bedcard.model.bedcard.TDrugsDoseExample" resultType="java.lang.Long">
+    select count(*) from t_drugs_dose
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update t_drugs_dose
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.medicationRecordId != null">
+        medication_record_id = #{record.medicationRecordId,jdbcType=INTEGER},
+      </if>
+      <if test="record.drugName != null">
+        drug_name = #{record.drugName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.breakfastConsumption != null">
+        breakfast_consumption = #{record.breakfastConsumption,jdbcType=VARCHAR},
+      </if>
+      <if test="record.lunchConsumption != null">
+        lunch_consumption = #{record.lunchConsumption,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dinnerConsumption != null">
+        dinner_consumption = #{record.dinnerConsumption,jdbcType=VARCHAR},
+      </if>
+      <if test="record.beforeSleepConsumption != null">
+        before_sleep_consumption = #{record.beforeSleepConsumption,jdbcType=VARCHAR},
+      </if>
+      <if test="record.other != null">
+        other = #{record.other,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=TINYINT},
+      </if>
+      <if test="record.description != null">
+        description = #{record.description,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.createBy != null">
+        create_by = #{record.createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateBy != null">
+        update_by = #{record.updateBy,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_drugs_dose
+    set id = #{record.id,jdbcType=INTEGER},
+      medication_record_id = #{record.medicationRecordId,jdbcType=INTEGER},
+      drug_name = #{record.drugName,jdbcType=VARCHAR},
+      breakfast_consumption = #{record.breakfastConsumption,jdbcType=VARCHAR},
+      lunch_consumption = #{record.lunchConsumption,jdbcType=VARCHAR},
+      dinner_consumption = #{record.dinnerConsumption,jdbcType=VARCHAR},
+      before_sleep_consumption = #{record.beforeSleepConsumption,jdbcType=VARCHAR},
+      other = #{record.other,jdbcType=VARCHAR},
+      status = #{record.status,jdbcType=TINYINT},
+      description = #{record.description,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      create_by = #{record.createBy,jdbcType=VARCHAR},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      update_by = #{record.updateBy,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bben.bedcard.model.bedcard.TDrugsDose">
+    update t_drugs_dose
+    <set>
+      <if test="medicationRecordId != null">
+        medication_record_id = #{medicationRecordId,jdbcType=INTEGER},
+      </if>
+      <if test="drugName != null">
+        drug_name = #{drugName,jdbcType=VARCHAR},
+      </if>
+      <if test="breakfastConsumption != null">
+        breakfast_consumption = #{breakfastConsumption,jdbcType=VARCHAR},
+      </if>
+      <if test="lunchConsumption != null">
+        lunch_consumption = #{lunchConsumption,jdbcType=VARCHAR},
+      </if>
+      <if test="dinnerConsumption != null">
+        dinner_consumption = #{dinnerConsumption,jdbcType=VARCHAR},
+      </if>
+      <if test="beforeSleepConsumption != null">
+        before_sleep_consumption = #{beforeSleepConsumption,jdbcType=VARCHAR},
+      </if>
+      <if test="other != null">
+        other = #{other,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createBy != null">
+        create_by = #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateBy != null">
+        update_by = #{updateBy,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bben.bedcard.model.bedcard.TDrugsDose">
+    update t_drugs_dose
+    set medication_record_id = #{medicationRecordId,jdbcType=INTEGER},
+      drug_name = #{drugName,jdbcType=VARCHAR},
+      breakfast_consumption = #{breakfastConsumption,jdbcType=VARCHAR},
+      lunch_consumption = #{lunchConsumption,jdbcType=VARCHAR},
+      dinner_consumption = #{dinnerConsumption,jdbcType=VARCHAR},
+      before_sleep_consumption = #{beforeSleepConsumption,jdbcType=VARCHAR},
+      other = #{other,jdbcType=VARCHAR},
+      status = #{status,jdbcType=TINYINT},
+      description = #{description,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      create_by = #{createBy,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      update_by = #{updateBy,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,306 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bben.infusion.mapper.infusion.TPatientInfusionWarnMapper">
+  <resultMap id="BaseResultMap" type="com.bben.infusion.model.infusion.TPatientInfusionWarn">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="patient_id" jdbcType="INTEGER" property="patientId" />
+    <result column="equipment_sn" jdbcType="VARCHAR" property="equipmentSn" />
+    <result column="warn_type" jdbcType="VARCHAR" property="warnType" />
+    <result column="drip_speed" jdbcType="INTEGER" property="dripSpeed" />
+    <result column="warn_time" jdbcType="TIMESTAMP" property="warnTime" />
+    <result column="deal_with_time" jdbcType="TIMESTAMP" property="dealWithTime" />
+    <result column="deal_wth_by" jdbcType="VARCHAR" property="dealWthBy" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, patient_id, equipment_sn, warn_type, drip_speed, warn_time, deal_with_time, deal_wth_by, 
+    description, create_time, create_by
+  </sql>
+  <select id="selectByExample" parameterType="com.bben.infusion.model.infusion.TPatientInfusionWarnExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_patient_infusion_warn
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_patient_infusion_warn
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_patient_infusion_warn
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.bben.infusion.model.infusion.TPatientInfusionWarnExample">
+    delete from t_patient_infusion_warn
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.bben.infusion.model.infusion.TPatientInfusionWarn">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_patient_infusion_warn (patient_id, equipment_sn, warn_type, 
+      drip_speed, warn_time, deal_with_time, 
+      deal_wth_by, description, create_time, 
+      create_by)
+    values (#{patientId,jdbcType=INTEGER}, #{equipmentSn,jdbcType=VARCHAR}, #{warnType,jdbcType=VARCHAR}, 
+      #{dripSpeed,jdbcType=INTEGER}, #{warnTime,jdbcType=TIMESTAMP}, #{dealWithTime,jdbcType=TIMESTAMP}, 
+      #{dealWthBy,jdbcType=VARCHAR}, #{description,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{createBy,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.bben.infusion.model.infusion.TPatientInfusionWarn">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_patient_infusion_warn
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="patientId != null">
+        patient_id,
+      </if>
+      <if test="equipmentSn != null">
+        equipment_sn,
+      </if>
+      <if test="warnType != null">
+        warn_type,
+      </if>
+      <if test="dripSpeed != null">
+        drip_speed,
+      </if>
+      <if test="warnTime != null">
+        warn_time,
+      </if>
+      <if test="dealWithTime != null">
+        deal_with_time,
+      </if>
+      <if test="dealWthBy != null">
+        deal_wth_by,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="createBy != null">
+        create_by,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="patientId != null">
+        #{patientId,jdbcType=INTEGER},
+      </if>
+      <if test="equipmentSn != null">
+        #{equipmentSn,jdbcType=VARCHAR},
+      </if>
+      <if test="warnType != null">
+        #{warnType,jdbcType=VARCHAR},
+      </if>
+      <if test="dripSpeed != null">
+        #{dripSpeed,jdbcType=INTEGER},
+      </if>
+      <if test="warnTime != null">
+        #{warnTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dealWithTime != null">
+        #{dealWithTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dealWthBy != null">
+        #{dealWthBy,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createBy != null">
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.bben.infusion.model.infusion.TPatientInfusionWarnExample" resultType="java.lang.Long">
+    select count(*) from t_patient_infusion_warn
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update t_patient_infusion_warn
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.patientId != null">
+        patient_id = #{record.patientId,jdbcType=INTEGER},
+      </if>
+      <if test="record.equipmentSn != null">
+        equipment_sn = #{record.equipmentSn,jdbcType=VARCHAR},
+      </if>
+      <if test="record.warnType != null">
+        warn_type = #{record.warnType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dripSpeed != null">
+        drip_speed = #{record.dripSpeed,jdbcType=INTEGER},
+      </if>
+      <if test="record.warnTime != null">
+        warn_time = #{record.warnTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.dealWithTime != null">
+        deal_with_time = #{record.dealWithTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.dealWthBy != null">
+        deal_wth_by = #{record.dealWthBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.description != null">
+        description = #{record.description,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.createBy != null">
+        create_by = #{record.createBy,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_patient_infusion_warn
+    set id = #{record.id,jdbcType=INTEGER},
+      patient_id = #{record.patientId,jdbcType=INTEGER},
+      equipment_sn = #{record.equipmentSn,jdbcType=VARCHAR},
+      warn_type = #{record.warnType,jdbcType=VARCHAR},
+      drip_speed = #{record.dripSpeed,jdbcType=INTEGER},
+      warn_time = #{record.warnTime,jdbcType=TIMESTAMP},
+      deal_with_time = #{record.dealWithTime,jdbcType=TIMESTAMP},
+      deal_wth_by = #{record.dealWthBy,jdbcType=VARCHAR},
+      description = #{record.description,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      create_by = #{record.createBy,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bben.infusion.model.infusion.TPatientInfusionWarn">
+    update t_patient_infusion_warn
+    <set>
+      <if test="patientId != null">
+        patient_id = #{patientId,jdbcType=INTEGER},
+      </if>
+      <if test="equipmentSn != null">
+        equipment_sn = #{equipmentSn,jdbcType=VARCHAR},
+      </if>
+      <if test="warnType != null">
+        warn_type = #{warnType,jdbcType=VARCHAR},
+      </if>
+      <if test="dripSpeed != null">
+        drip_speed = #{dripSpeed,jdbcType=INTEGER},
+      </if>
+      <if test="warnTime != null">
+        warn_time = #{warnTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dealWithTime != null">
+        deal_with_time = #{dealWithTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="dealWthBy != null">
+        deal_wth_by = #{dealWthBy,jdbcType=VARCHAR},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createBy != null">
+        create_by = #{createBy,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bben.infusion.model.infusion.TPatientInfusionWarn">
+    update t_patient_infusion_warn
+    set patient_id = #{patientId,jdbcType=INTEGER},
+      equipment_sn = #{equipmentSn,jdbcType=VARCHAR},
+      warn_type = #{warnType,jdbcType=VARCHAR},
+      drip_speed = #{dripSpeed,jdbcType=INTEGER},
+      warn_time = #{warnTime,jdbcType=TIMESTAMP},
+      deal_with_time = #{dealWithTime,jdbcType=TIMESTAMP},
+      deal_wth_by = #{dealWthBy,jdbcType=VARCHAR},
+      description = #{description,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      create_by = #{createBy,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bben.infusion.mapper.infusion.TPatientInfusionInfoMapper">
+  <resultMap id="BaseResultMap" type="com.bben.infusion.model.infusion.TPatientInfusionInfo">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="patient_id" jdbcType="INTEGER" property="patientId" />
+    <result column="infusion_no" jdbcType="VARCHAR" property="infusionNo" />
+    <result column="sequence_id" jdbcType="INTEGER" property="sequenceId" />
+    <result column="drug_name_list" jdbcType="VARCHAR" property="drugNameList" />
+    <result column="max_drip" jdbcType="INTEGER" property="maxDrip" />
+    <result column="min_drip" jdbcType="INTEGER" property="minDrip" />
+    <result column="max_time_len" jdbcType="INTEGER" property="maxTimeLen" />
+    <result column="min_time_len" jdbcType="INTEGER" property="minTimeLen" />
+    <result column="bottle_liquid_weight" jdbcType="INTEGER" property="bottleLiquidWeight" />
+    <result column="bottle_weight" jdbcType="INTEGER" property="bottleWeight" />
+    <result column="estimate_time_len" jdbcType="INTEGER" property="estimateTimeLen" />
+    <result column="normal_drip" jdbcType="INTEGER" property="normalDrip" />
+    <result column="run_status" jdbcType="INTEGER" property="runStatus" />
+    <result column="begin_time" jdbcType="TIMESTAMP" property="beginTime" />
+    <result column="end_time" jdbcType="TIMESTAMP" property="endTime" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, patient_id, infusion_no, sequence_id, drug_name_list, max_drip, min_drip, max_time_len, 
+    min_time_len, bottle_liquid_weight, bottle_weight, estimate_time_len, normal_drip, 
+    run_status, begin_time, end_time, description, create_time, create_by
+  </sql>
+  <select id="selectByExample" parameterType="com.bben.infusion.model.infusion.TPatientInfusionInfoExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_patient_infusion_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_patient_infusion_info
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_patient_infusion_info
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.bben.infusion.model.infusion.TPatientInfusionInfoExample">
+    delete from t_patient_infusion_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.bben.infusion.model.infusion.TPatientInfusionInfo">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_patient_infusion_info (patient_id, infusion_no, sequence_id, 
+      drug_name_list, max_drip, min_drip, 
+      max_time_len, min_time_len, bottle_liquid_weight, 
+      bottle_weight, estimate_time_len, normal_drip, 
+      run_status, begin_time, end_time, 
+      description, create_time, create_by
+      )
+    values (#{patientId,jdbcType=INTEGER}, #{infusionNo,jdbcType=VARCHAR}, #{sequenceId,jdbcType=INTEGER}, 
+      #{drugNameList,jdbcType=VARCHAR}, #{maxDrip,jdbcType=INTEGER}, #{minDrip,jdbcType=INTEGER}, 
+      #{maxTimeLen,jdbcType=INTEGER}, #{minTimeLen,jdbcType=INTEGER}, #{bottleLiquidWeight,jdbcType=INTEGER}, 
+      #{bottleWeight,jdbcType=INTEGER}, #{estimateTimeLen,jdbcType=INTEGER}, #{normalDrip,jdbcType=INTEGER}, 
+      #{runStatus,jdbcType=INTEGER}, #{beginTime,jdbcType=TIMESTAMP}, #{endTime,jdbcType=TIMESTAMP}, 
+      #{description,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, #{createBy,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.bben.infusion.model.infusion.TPatientInfusionInfo">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_patient_infusion_info
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="patientId != null">
+        patient_id,
+      </if>
+      <if test="infusionNo != null">
+        infusion_no,
+      </if>
+      <if test="sequenceId != null">
+        sequence_id,
+      </if>
+      <if test="drugNameList != null">
+        drug_name_list,
+      </if>
+      <if test="maxDrip != null">
+        max_drip,
+      </if>
+      <if test="minDrip != null">
+        min_drip,
+      </if>
+      <if test="maxTimeLen != null">
+        max_time_len,
+      </if>
+      <if test="minTimeLen != null">
+        min_time_len,
+      </if>
+      <if test="bottleLiquidWeight != null">
+        bottle_liquid_weight,
+      </if>
+      <if test="bottleWeight != null">
+        bottle_weight,
+      </if>
+      <if test="estimateTimeLen != null">
+        estimate_time_len,
+      </if>
+      <if test="normalDrip != null">
+        normal_drip,
+      </if>
+      <if test="runStatus != null">
+        run_status,
+      </if>
+      <if test="beginTime != null">
+        begin_time,
+      </if>
+      <if test="endTime != null">
+        end_time,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="createBy != null">
+        create_by,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="patientId != null">
+        #{patientId,jdbcType=INTEGER},
+      </if>
+      <if test="infusionNo != null">
+        #{infusionNo,jdbcType=VARCHAR},
+      </if>
+      <if test="sequenceId != null">
+        #{sequenceId,jdbcType=INTEGER},
+      </if>
+      <if test="drugNameList != null">
+        #{drugNameList,jdbcType=VARCHAR},
+      </if>
+      <if test="maxDrip != null">
+        #{maxDrip,jdbcType=INTEGER},
+      </if>
+      <if test="minDrip != null">
+        #{minDrip,jdbcType=INTEGER},
+      </if>
+      <if test="maxTimeLen != null">
+        #{maxTimeLen,jdbcType=INTEGER},
+      </if>
+      <if test="minTimeLen != null">
+        #{minTimeLen,jdbcType=INTEGER},
+      </if>
+      <if test="bottleLiquidWeight != null">
+        #{bottleLiquidWeight,jdbcType=INTEGER},
+      </if>
+      <if test="bottleWeight != null">
+        #{bottleWeight,jdbcType=INTEGER},
+      </if>
+      <if test="estimateTimeLen != null">
+        #{estimateTimeLen,jdbcType=INTEGER},
+      </if>
+      <if test="normalDrip != null">
+        #{normalDrip,jdbcType=INTEGER},
+      </if>
+      <if test="runStatus != null">
+        #{runStatus,jdbcType=INTEGER},
+      </if>
+      <if test="beginTime != null">
+        #{beginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null">
+        #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createBy != null">
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.bben.infusion.model.infusion.TPatientInfusionInfoExample" resultType="java.lang.Long">
+    select count(*) from t_patient_infusion_info
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update t_patient_infusion_info
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.patientId != null">
+        patient_id = #{record.patientId,jdbcType=INTEGER},
+      </if>
+      <if test="record.infusionNo != null">
+        infusion_no = #{record.infusionNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sequenceId != null">
+        sequence_id = #{record.sequenceId,jdbcType=INTEGER},
+      </if>
+      <if test="record.drugNameList != null">
+        drug_name_list = #{record.drugNameList,jdbcType=VARCHAR},
+      </if>
+      <if test="record.maxDrip != null">
+        max_drip = #{record.maxDrip,jdbcType=INTEGER},
+      </if>
+      <if test="record.minDrip != null">
+        min_drip = #{record.minDrip,jdbcType=INTEGER},
+      </if>
+      <if test="record.maxTimeLen != null">
+        max_time_len = #{record.maxTimeLen,jdbcType=INTEGER},
+      </if>
+      <if test="record.minTimeLen != null">
+        min_time_len = #{record.minTimeLen,jdbcType=INTEGER},
+      </if>
+      <if test="record.bottleLiquidWeight != null">
+        bottle_liquid_weight = #{record.bottleLiquidWeight,jdbcType=INTEGER},
+      </if>
+      <if test="record.bottleWeight != null">
+        bottle_weight = #{record.bottleWeight,jdbcType=INTEGER},
+      </if>
+      <if test="record.estimateTimeLen != null">
+        estimate_time_len = #{record.estimateTimeLen,jdbcType=INTEGER},
+      </if>
+      <if test="record.normalDrip != null">
+        normal_drip = #{record.normalDrip,jdbcType=INTEGER},
+      </if>
+      <if test="record.runStatus != null">
+        run_status = #{record.runStatus,jdbcType=INTEGER},
+      </if>
+      <if test="record.beginTime != null">
+        begin_time = #{record.beginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.endTime != null">
+        end_time = #{record.endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.description != null">
+        description = #{record.description,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.createBy != null">
+        create_by = #{record.createBy,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_patient_infusion_info
+    set id = #{record.id,jdbcType=INTEGER},
+      patient_id = #{record.patientId,jdbcType=INTEGER},
+      infusion_no = #{record.infusionNo,jdbcType=VARCHAR},
+      sequence_id = #{record.sequenceId,jdbcType=INTEGER},
+      drug_name_list = #{record.drugNameList,jdbcType=VARCHAR},
+      max_drip = #{record.maxDrip,jdbcType=INTEGER},
+      min_drip = #{record.minDrip,jdbcType=INTEGER},
+      max_time_len = #{record.maxTimeLen,jdbcType=INTEGER},
+      min_time_len = #{record.minTimeLen,jdbcType=INTEGER},
+      bottle_liquid_weight = #{record.bottleLiquidWeight,jdbcType=INTEGER},
+      bottle_weight = #{record.bottleWeight,jdbcType=INTEGER},
+      estimate_time_len = #{record.estimateTimeLen,jdbcType=INTEGER},
+      normal_drip = #{record.normalDrip,jdbcType=INTEGER},
+      run_status = #{record.runStatus,jdbcType=INTEGER},
+      begin_time = #{record.beginTime,jdbcType=TIMESTAMP},
+      end_time = #{record.endTime,jdbcType=TIMESTAMP},
+      description = #{record.description,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      create_by = #{record.createBy,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bben.infusion.model.infusion.TPatientInfusionInfo">
+    update t_patient_infusion_info
+    <set>
+      <if test="patientId != null">
+        patient_id = #{patientId,jdbcType=INTEGER},
+      </if>
+      <if test="infusionNo != null">
+        infusion_no = #{infusionNo,jdbcType=VARCHAR},
+      </if>
+      <if test="sequenceId != null">
+        sequence_id = #{sequenceId,jdbcType=INTEGER},
+      </if>
+      <if test="drugNameList != null">
+        drug_name_list = #{drugNameList,jdbcType=VARCHAR},
+      </if>
+      <if test="maxDrip != null">
+        max_drip = #{maxDrip,jdbcType=INTEGER},
+      </if>
+      <if test="minDrip != null">
+        min_drip = #{minDrip,jdbcType=INTEGER},
+      </if>
+      <if test="maxTimeLen != null">
+        max_time_len = #{maxTimeLen,jdbcType=INTEGER},
+      </if>
+      <if test="minTimeLen != null">
+        min_time_len = #{minTimeLen,jdbcType=INTEGER},
+      </if>
+      <if test="bottleLiquidWeight != null">
+        bottle_liquid_weight = #{bottleLiquidWeight,jdbcType=INTEGER},
+      </if>
+      <if test="bottleWeight != null">
+        bottle_weight = #{bottleWeight,jdbcType=INTEGER},
+      </if>
+      <if test="estimateTimeLen != null">
+        estimate_time_len = #{estimateTimeLen,jdbcType=INTEGER},
+      </if>
+      <if test="normalDrip != null">
+        normal_drip = #{normalDrip,jdbcType=INTEGER},
+      </if>
+      <if test="runStatus != null">
+        run_status = #{runStatus,jdbcType=INTEGER},
+      </if>
+      <if test="beginTime != null">
+        begin_time = #{beginTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="endTime != null">
+        end_time = #{endTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createBy != null">
+        create_by = #{createBy,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bben.infusion.model.infusion.TPatientInfusionInfo">
+    update t_patient_infusion_info
+    set patient_id = #{patientId,jdbcType=INTEGER},
+      infusion_no = #{infusionNo,jdbcType=VARCHAR},
+      sequence_id = #{sequenceId,jdbcType=INTEGER},
+      drug_name_list = #{drugNameList,jdbcType=VARCHAR},
+      max_drip = #{maxDrip,jdbcType=INTEGER},
+      min_drip = #{minDrip,jdbcType=INTEGER},
+      max_time_len = #{maxTimeLen,jdbcType=INTEGER},
+      min_time_len = #{minTimeLen,jdbcType=INTEGER},
+      bottle_liquid_weight = #{bottleLiquidWeight,jdbcType=INTEGER},
+      bottle_weight = #{bottleWeight,jdbcType=INTEGER},
+      estimate_time_len = #{estimateTimeLen,jdbcType=INTEGER},
+      normal_drip = #{normalDrip,jdbcType=INTEGER},
+      run_status = #{runStatus,jdbcType=INTEGER},
+      begin_time = #{beginTime,jdbcType=TIMESTAMP},
+      end_time = #{endTime,jdbcType=TIMESTAMP},
+      description = #{description,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      create_by = #{createBy,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

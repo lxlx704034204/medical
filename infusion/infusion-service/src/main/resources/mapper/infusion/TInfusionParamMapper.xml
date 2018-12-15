@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bben.infusion.mapper.infusion.TInfusionParamMapper">
+  <resultMap id="BaseResultMap" type="com.bben.infusion.model.infusion.TInfusionParam">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="drip_type" jdbcType="VARCHAR" property="dripType" />
+    <result column="old_max" jdbcType="INTEGER" property="oldMax" />
+    <result column="old_min" jdbcType="INTEGER" property="oldMin" />
+    <result column="max_drip_speed" jdbcType="INTEGER" property="maxDripSpeed" />
+    <result column="min_drip_speed" jdbcType="INTEGER" property="minDripSpeed" />
+    <result column="medicine_name" jdbcType="VARCHAR" property="medicineName" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, drip_type, old_max, old_min, max_drip_speed, min_drip_speed, medicine_name, status, 
+    description, create_time, create_by, update_time, update_by
+  </sql>
+  <select id="selectByExample" parameterType="com.bben.infusion.model.infusion.TInfusionParamExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_infusion_param
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_infusion_param
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_infusion_param
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.bben.infusion.model.infusion.TInfusionParamExample">
+    delete from t_infusion_param
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.bben.infusion.model.infusion.TInfusionParam">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_infusion_param (drip_type, old_max, old_min, 
+      max_drip_speed, min_drip_speed, medicine_name, 
+      status, description, create_time, 
+      create_by, update_time, update_by
+      )
+    values (#{dripType,jdbcType=VARCHAR}, #{oldMax,jdbcType=INTEGER}, #{oldMin,jdbcType=INTEGER}, 
+      #{maxDripSpeed,jdbcType=INTEGER}, #{minDripSpeed,jdbcType=INTEGER}, #{medicineName,jdbcType=VARCHAR}, 
+      #{status,jdbcType=TINYINT}, #{description,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{createBy,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, #{updateBy,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.bben.infusion.model.infusion.TInfusionParam">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_infusion_param
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="dripType != null">
+        drip_type,
+      </if>
+      <if test="oldMax != null">
+        old_max,
+      </if>
+      <if test="oldMin != null">
+        old_min,
+      </if>
+      <if test="maxDripSpeed != null">
+        max_drip_speed,
+      </if>
+      <if test="minDripSpeed != null">
+        min_drip_speed,
+      </if>
+      <if test="medicineName != null">
+        medicine_name,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="createBy != null">
+        create_by,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="updateBy != null">
+        update_by,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="dripType != null">
+        #{dripType,jdbcType=VARCHAR},
+      </if>
+      <if test="oldMax != null">
+        #{oldMax,jdbcType=INTEGER},
+      </if>
+      <if test="oldMin != null">
+        #{oldMin,jdbcType=INTEGER},
+      </if>
+      <if test="maxDripSpeed != null">
+        #{maxDripSpeed,jdbcType=INTEGER},
+      </if>
+      <if test="minDripSpeed != null">
+        #{minDripSpeed,jdbcType=INTEGER},
+      </if>
+      <if test="medicineName != null">
+        #{medicineName,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createBy != null">
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateBy != null">
+        #{updateBy,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.bben.infusion.model.infusion.TInfusionParamExample" resultType="java.lang.Long">
+    select count(*) from t_infusion_param
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update t_infusion_param
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.dripType != null">
+        drip_type = #{record.dripType,jdbcType=VARCHAR},
+      </if>
+      <if test="record.oldMax != null">
+        old_max = #{record.oldMax,jdbcType=INTEGER},
+      </if>
+      <if test="record.oldMin != null">
+        old_min = #{record.oldMin,jdbcType=INTEGER},
+      </if>
+      <if test="record.maxDripSpeed != null">
+        max_drip_speed = #{record.maxDripSpeed,jdbcType=INTEGER},
+      </if>
+      <if test="record.minDripSpeed != null">
+        min_drip_speed = #{record.minDripSpeed,jdbcType=INTEGER},
+      </if>
+      <if test="record.medicineName != null">
+        medicine_name = #{record.medicineName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=TINYINT},
+      </if>
+      <if test="record.description != null">
+        description = #{record.description,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.createBy != null">
+        create_by = #{record.createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateBy != null">
+        update_by = #{record.updateBy,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_infusion_param
+    set id = #{record.id,jdbcType=INTEGER},
+      drip_type = #{record.dripType,jdbcType=VARCHAR},
+      old_max = #{record.oldMax,jdbcType=INTEGER},
+      old_min = #{record.oldMin,jdbcType=INTEGER},
+      max_drip_speed = #{record.maxDripSpeed,jdbcType=INTEGER},
+      min_drip_speed = #{record.minDripSpeed,jdbcType=INTEGER},
+      medicine_name = #{record.medicineName,jdbcType=VARCHAR},
+      status = #{record.status,jdbcType=TINYINT},
+      description = #{record.description,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      create_by = #{record.createBy,jdbcType=VARCHAR},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      update_by = #{record.updateBy,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bben.infusion.model.infusion.TInfusionParam">
+    update t_infusion_param
+    <set>
+      <if test="dripType != null">
+        drip_type = #{dripType,jdbcType=VARCHAR},
+      </if>
+      <if test="oldMax != null">
+        old_max = #{oldMax,jdbcType=INTEGER},
+      </if>
+      <if test="oldMin != null">
+        old_min = #{oldMin,jdbcType=INTEGER},
+      </if>
+      <if test="maxDripSpeed != null">
+        max_drip_speed = #{maxDripSpeed,jdbcType=INTEGER},
+      </if>
+      <if test="minDripSpeed != null">
+        min_drip_speed = #{minDripSpeed,jdbcType=INTEGER},
+      </if>
+      <if test="medicineName != null">
+        medicine_name = #{medicineName,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createBy != null">
+        create_by = #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateBy != null">
+        update_by = #{updateBy,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bben.infusion.model.infusion.TInfusionParam">
+    update t_infusion_param
+    set drip_type = #{dripType,jdbcType=VARCHAR},
+      old_max = #{oldMax,jdbcType=INTEGER},
+      old_min = #{oldMin,jdbcType=INTEGER},
+      max_drip_speed = #{maxDripSpeed,jdbcType=INTEGER},
+      min_drip_speed = #{minDripSpeed,jdbcType=INTEGER},
+      medicine_name = #{medicineName,jdbcType=VARCHAR},
+      status = #{status,jdbcType=TINYINT},
+      description = #{description,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      create_by = #{createBy,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      update_by = #{updateBy,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

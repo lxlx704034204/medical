@@ -1,0 +1,34 @@
+server:
+  port: 8583
+
+spring:
+   application:
+      name: task-service
+
+#database:
+#  url:  jdbc:mysql://172.30.1.246:3306/medical?useUnicode=true&useSSL=false&autoReconnect=true&serverTimezone=UTC&characterEncoding=UTF-8&queryInterceptors=com.bben.medical.common.LogSqlQueryInterceptor
+#  userName: root
+#  password: chen
+#  initialSize: 1
+#  minIdle: 1
+#  maxActive: 1
+#  maxWait: 60000
+#  timeBetweenEvictionRunsMillis: 60000
+#  minEvictableIdleTimeMillis: 300000
+#  validationQuery: SELECT 'x'
+#  testWhileIdle: true
+#  testOnBorrow: false
+#  testOnReturn: false
+#  filters: stat,wall
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+
