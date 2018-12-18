@@ -19,6 +19,7 @@
         <module>bedcard-service</module>
         <module>LongConnection-Service</module>
         <module>web-service</module>
+        <module>sami-service</module>
     </modules>
 
     <parent>
