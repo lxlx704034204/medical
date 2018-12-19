@@ -7,12 +7,14 @@ import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 import org.springframework.cloud.netflix.hystrix.EnableHystrix;
 import org.springframework.context.annotation.Bean;
+import org.springframework.scheduling.annotation.EnableScheduling;
 import org.springframework.web.client.RestTemplate;
 
 @SpringBootApplication
 @EnableCaching
 @EnableHystrix
 @EnableEurekaClient
+@EnableScheduling
 public class SamiServiceApplication {
     @Bean
     @LoadBalanced
