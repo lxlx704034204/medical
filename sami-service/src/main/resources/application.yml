@@ -38,9 +38,10 @@ eureka:
          user.name: ${spring.security.user.name}
          user.password: ${spring.security.user.password}
 
+
 spring:
     application:
-       name: web-service
+       name: sami-service
     security:
        user:
           name: "client"
@@ -62,8 +63,8 @@ spring:
 db:
     samiservice:
         #url: jdbc:mysql://172.30.1.246:3306/bben_medical?useUnicode=true&useSSL=false&autoReconnect=true&characterEncoding=UTF-8&queryInterceptors=com.bben.samiservice.common.LogSqlQueryInterceptor&serverTimezone=GMT%2B8
-        #url: jdbc:mysql://localhost:3306/bben_medical?useUnicode=true&useSSL=false&autoReconnect=true&characterEncoding=UTF-8&queryInterceptors=com.bben.samiservice.common.LogSqlQueryInterceptor&serverTimezone=GMT%2B8
-        url: jdbc:mysql://10.100.1.132:3306/bben_medical?useUnicode=true&useSSL=false&autoReconnect=true&characterEncoding=UTF-8&queryInterceptors=com.bben.samiservice.common.LogSqlQueryInterceptor&serverTimezone=GMT%2B8
+        url: jdbc:mysql://localhost:3306/bben_medical?useUnicode=true&useSSL=false&autoReconnect=true&characterEncoding=UTF-8&queryInterceptors=com.bben.samiservice.common.LogSqlQueryInterceptor&serverTimezone=GMT%2B8
+        #url: jdbc:mysql://10.100.1.132:3306/bben_medical?useUnicode=true&useSSL=false&autoReconnect=true&characterEncoding=UTF-8&queryInterceptors=com.bben.samiservice.common.LogSqlQueryInterceptor&serverTimezone=GMT%2B8
         username: root
         password: 123456
 

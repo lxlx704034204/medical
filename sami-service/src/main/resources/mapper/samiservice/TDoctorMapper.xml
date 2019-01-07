@@ -1,0 +1,842 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.bben.samiservice.mapper.samiservice.TDoctorMapper">
+  <resultMap id="BaseResultMap" type="com.bben.samiservice.model.samiservice.TDoctor">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="code" jdbcType="VARCHAR" property="code" />
+    <result column="hospital_id" jdbcType="INTEGER" property="hospitalId" />
+    <result column="hospital_dept_id" jdbcType="INTEGER" property="hospitalDeptId" />
+    <result column="nurse_cell_code" jdbcType="VARCHAR" property="nurseCellCode" />
+    <result column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="doctor_name" jdbcType="VARCHAR" property="doctorName" />
+    <result column="sex" jdbcType="INTEGER" property="sex" />
+    <result column="marriage" jdbcType="INTEGER" property="marriage" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="pca_code" jdbcType="INTEGER" property="pcaCode" />
+    <result column="address" jdbcType="VARCHAR" property="address" />
+    <result column="post_code" jdbcType="VARCHAR" property="postCode" />
+    <result column="mobile" jdbcType="VARCHAR" property="mobile" />
+    <result column="intro" jdbcType="VARCHAR" property="intro" />
+    <result column="is_expert" jdbcType="TINYINT" property="isExpert" />
+    <result column="specialty" jdbcType="VARCHAR" property="specialty" />
+    <result column="area_code" jdbcType="VARCHAR" property="areaCode" />
+    <result column="education" jdbcType="VARCHAR" property="education" />
+    <result column="title" jdbcType="VARCHAR" property="title" />
+    <result column="duties" jdbcType="VARCHAR" property="duties" />
+    <result column="org_code" jdbcType="VARCHAR" property="orgCode" />
+    <result column="id_type" jdbcType="INTEGER" property="idType" />
+    <result column="id_number" jdbcType="VARCHAR" property="idNumber" />
+    <result column="certificate_no" jdbcType="VARCHAR" property="certificateNo" />
+    <result column="id_url" jdbcType="VARCHAR" property="idUrl" />
+    <result column="check_state" jdbcType="INTEGER" property="checkState" />
+    <result column="signature_url" jdbcType="VARCHAR" property="signatureUrl" />
+    <result column="handheld_id_url" jdbcType="VARCHAR" property="handheldIdUrl" />
+    <result column="certificate_url" jdbcType="VARCHAR" property="certificateUrl" />
+    <result column="image_url" jdbcType="VARCHAR" property="imageUrl" />
+    <result column="open_id" jdbcType="VARCHAR" property="openId" />
+    <result column="height" jdbcType="DECIMAL" property="height" />
+    <result column="weight" jdbcType="DECIMAL" property="weight" />
+    <result column="bpm" jdbcType="VARCHAR" property="bpm" />
+    <result column="guo_hao_money" jdbcType="INTEGER" property="guoHaoMoney" />
+    <result column="sort" jdbcType="INTEGER" property="sort" />
+    <result column="status" jdbcType="TINYINT" property="status" />
+    <result column="description" jdbcType="VARCHAR" property="description" />
+    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
+    <result column="create_by" jdbcType="VARCHAR" property="createBy" />
+    <result column="update_time" jdbcType="TIMESTAMP" property="updateTime" />
+    <result column="update_by" jdbcType="VARCHAR" property="updateBy" />
+    <result column="message_id" jdbcType="VARCHAR" property="messageId" />
+    <result column="data_id" jdbcType="VARCHAR" property="dataId" />
+  </resultMap>
+  <sql id="Example_Where_Clause">
+    <where>
+      <foreach collection="oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause">
+    <where>
+      <foreach collection="example.oredCriteria" item="criteria" separator="or">
+        <if test="criteria.valid">
+          <trim prefix="(" prefixOverrides="and" suffix=")">
+            <foreach collection="criteria.criteria" item="criterion">
+              <choose>
+                <when test="criterion.noValue">
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue">
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue">
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue">
+                  and ${criterion.condition}
+                  <foreach close=")" collection="criterion.value" item="listItem" open="(" separator=",">
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List">
+    id, code, hospital_id, hospital_dept_id, nurse_cell_code, user_id, doctor_name, sex, 
+    marriage, birthday, pca_code, address, post_code, mobile, intro, is_expert, specialty, 
+    area_code, education, title, duties, org_code, id_type, id_number, certificate_no, 
+    id_url, check_state, signature_url, handheld_id_url, certificate_url, image_url, 
+    open_id, height, weight, bpm, guo_hao_money, sort, status, description, create_time, 
+    create_by, update_time, update_by, message_id, data_id
+  </sql>
+  <select id="selectByExample" parameterType="com.bben.samiservice.model.samiservice.TDoctorExample" resultMap="BaseResultMap">
+    select
+    <if test="distinct">
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from t_doctor
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null">
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from t_doctor
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from t_doctor
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="com.bben.samiservice.model.samiservice.TDoctorExample">
+    delete from t_doctor
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="com.bben.samiservice.model.samiservice.TDoctor">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_doctor (code, hospital_id, hospital_dept_id, 
+      nurse_cell_code, user_id, doctor_name, 
+      sex, marriage, birthday, 
+      pca_code, address, post_code, 
+      mobile, intro, is_expert, 
+      specialty, area_code, education, 
+      title, duties, org_code, 
+      id_type, id_number, certificate_no, 
+      id_url, check_state, signature_url, 
+      handheld_id_url, certificate_url, image_url, 
+      open_id, height, weight, 
+      bpm, guo_hao_money, sort, 
+      status, description, create_time, 
+      create_by, update_time, update_by, 
+      message_id, data_id)
+    values (#{code,jdbcType=VARCHAR}, #{hospitalId,jdbcType=INTEGER}, #{hospitalDeptId,jdbcType=INTEGER}, 
+      #{nurseCellCode,jdbcType=VARCHAR}, #{userId,jdbcType=INTEGER}, #{doctorName,jdbcType=VARCHAR}, 
+      #{sex,jdbcType=INTEGER}, #{marriage,jdbcType=INTEGER}, #{birthday,jdbcType=DATE}, 
+      #{pcaCode,jdbcType=INTEGER}, #{address,jdbcType=VARCHAR}, #{postCode,jdbcType=VARCHAR}, 
+      #{mobile,jdbcType=VARCHAR}, #{intro,jdbcType=VARCHAR}, #{isExpert,jdbcType=TINYINT}, 
+      #{specialty,jdbcType=VARCHAR}, #{areaCode,jdbcType=VARCHAR}, #{education,jdbcType=VARCHAR}, 
+      #{title,jdbcType=VARCHAR}, #{duties,jdbcType=VARCHAR}, #{orgCode,jdbcType=VARCHAR}, 
+      #{idType,jdbcType=INTEGER}, #{idNumber,jdbcType=VARCHAR}, #{certificateNo,jdbcType=VARCHAR}, 
+      #{idUrl,jdbcType=VARCHAR}, #{checkState,jdbcType=INTEGER}, #{signatureUrl,jdbcType=VARCHAR}, 
+      #{handheldIdUrl,jdbcType=VARCHAR}, #{certificateUrl,jdbcType=VARCHAR}, #{imageUrl,jdbcType=VARCHAR}, 
+      #{openId,jdbcType=VARCHAR}, #{height,jdbcType=DECIMAL}, #{weight,jdbcType=DECIMAL}, 
+      #{bpm,jdbcType=VARCHAR}, #{guoHaoMoney,jdbcType=INTEGER}, #{sort,jdbcType=INTEGER}, 
+      #{status,jdbcType=TINYINT}, #{description,jdbcType=VARCHAR}, #{createTime,jdbcType=TIMESTAMP}, 
+      #{createBy,jdbcType=VARCHAR}, #{updateTime,jdbcType=TIMESTAMP}, #{updateBy,jdbcType=VARCHAR}, 
+      #{messageId,jdbcType=VARCHAR}, #{dataId,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="com.bben.samiservice.model.samiservice.TDoctor">
+    <selectKey keyProperty="id" order="AFTER" resultType="java.lang.Integer">
+      SELECT LAST_INSERT_ID()
+    </selectKey>
+    insert into t_doctor
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="code != null">
+        code,
+      </if>
+      <if test="hospitalId != null">
+        hospital_id,
+      </if>
+      <if test="hospitalDeptId != null">
+        hospital_dept_id,
+      </if>
+      <if test="nurseCellCode != null">
+        nurse_cell_code,
+      </if>
+      <if test="userId != null">
+        user_id,
+      </if>
+      <if test="doctorName != null">
+        doctor_name,
+      </if>
+      <if test="sex != null">
+        sex,
+      </if>
+      <if test="marriage != null">
+        marriage,
+      </if>
+      <if test="birthday != null">
+        birthday,
+      </if>
+      <if test="pcaCode != null">
+        pca_code,
+      </if>
+      <if test="address != null">
+        address,
+      </if>
+      <if test="postCode != null">
+        post_code,
+      </if>
+      <if test="mobile != null">
+        mobile,
+      </if>
+      <if test="intro != null">
+        intro,
+      </if>
+      <if test="isExpert != null">
+        is_expert,
+      </if>
+      <if test="specialty != null">
+        specialty,
+      </if>
+      <if test="areaCode != null">
+        area_code,
+      </if>
+      <if test="education != null">
+        education,
+      </if>
+      <if test="title != null">
+        title,
+      </if>
+      <if test="duties != null">
+        duties,
+      </if>
+      <if test="orgCode != null">
+        org_code,
+      </if>
+      <if test="idType != null">
+        id_type,
+      </if>
+      <if test="idNumber != null">
+        id_number,
+      </if>
+      <if test="certificateNo != null">
+        certificate_no,
+      </if>
+      <if test="idUrl != null">
+        id_url,
+      </if>
+      <if test="checkState != null">
+        check_state,
+      </if>
+      <if test="signatureUrl != null">
+        signature_url,
+      </if>
+      <if test="handheldIdUrl != null">
+        handheld_id_url,
+      </if>
+      <if test="certificateUrl != null">
+        certificate_url,
+      </if>
+      <if test="imageUrl != null">
+        image_url,
+      </if>
+      <if test="openId != null">
+        open_id,
+      </if>
+      <if test="height != null">
+        height,
+      </if>
+      <if test="weight != null">
+        weight,
+      </if>
+      <if test="bpm != null">
+        bpm,
+      </if>
+      <if test="guoHaoMoney != null">
+        guo_hao_money,
+      </if>
+      <if test="sort != null">
+        sort,
+      </if>
+      <if test="status != null">
+        status,
+      </if>
+      <if test="description != null">
+        description,
+      </if>
+      <if test="createTime != null">
+        create_time,
+      </if>
+      <if test="createBy != null">
+        create_by,
+      </if>
+      <if test="updateTime != null">
+        update_time,
+      </if>
+      <if test="updateBy != null">
+        update_by,
+      </if>
+      <if test="messageId != null">
+        message_id,
+      </if>
+      <if test="dataId != null">
+        data_id,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="code != null">
+        #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="hospitalId != null">
+        #{hospitalId,jdbcType=INTEGER},
+      </if>
+      <if test="hospitalDeptId != null">
+        #{hospitalDeptId,jdbcType=INTEGER},
+      </if>
+      <if test="nurseCellCode != null">
+        #{nurseCellCode,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="doctorName != null">
+        #{doctorName,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=INTEGER},
+      </if>
+      <if test="marriage != null">
+        #{marriage,jdbcType=INTEGER},
+      </if>
+      <if test="birthday != null">
+        #{birthday,jdbcType=DATE},
+      </if>
+      <if test="pcaCode != null">
+        #{pcaCode,jdbcType=INTEGER},
+      </if>
+      <if test="address != null">
+        #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="postCode != null">
+        #{postCode,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null">
+        #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="intro != null">
+        #{intro,jdbcType=VARCHAR},
+      </if>
+      <if test="isExpert != null">
+        #{isExpert,jdbcType=TINYINT},
+      </if>
+      <if test="specialty != null">
+        #{specialty,jdbcType=VARCHAR},
+      </if>
+      <if test="areaCode != null">
+        #{areaCode,jdbcType=VARCHAR},
+      </if>
+      <if test="education != null">
+        #{education,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="duties != null">
+        #{duties,jdbcType=VARCHAR},
+      </if>
+      <if test="orgCode != null">
+        #{orgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="idType != null">
+        #{idType,jdbcType=INTEGER},
+      </if>
+      <if test="idNumber != null">
+        #{idNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="certificateNo != null">
+        #{certificateNo,jdbcType=VARCHAR},
+      </if>
+      <if test="idUrl != null">
+        #{idUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="checkState != null">
+        #{checkState,jdbcType=INTEGER},
+      </if>
+      <if test="signatureUrl != null">
+        #{signatureUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="handheldIdUrl != null">
+        #{handheldIdUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="certificateUrl != null">
+        #{certificateUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="imageUrl != null">
+        #{imageUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="openId != null">
+        #{openId,jdbcType=VARCHAR},
+      </if>
+      <if test="height != null">
+        #{height,jdbcType=DECIMAL},
+      </if>
+      <if test="weight != null">
+        #{weight,jdbcType=DECIMAL},
+      </if>
+      <if test="bpm != null">
+        #{bpm,jdbcType=VARCHAR},
+      </if>
+      <if test="guoHaoMoney != null">
+        #{guoHaoMoney,jdbcType=INTEGER},
+      </if>
+      <if test="sort != null">
+        #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=TINYINT},
+      </if>
+      <if test="description != null">
+        #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createBy != null">
+        #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateBy != null">
+        #{updateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="messageId != null">
+        #{messageId,jdbcType=VARCHAR},
+      </if>
+      <if test="dataId != null">
+        #{dataId,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="com.bben.samiservice.model.samiservice.TDoctorExample" resultType="java.lang.Long">
+    select count(*) from t_doctor
+    <if test="_parameter != null">
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map">
+    update t_doctor
+    <set>
+      <if test="record.id != null">
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.code != null">
+        code = #{record.code,jdbcType=VARCHAR},
+      </if>
+      <if test="record.hospitalId != null">
+        hospital_id = #{record.hospitalId,jdbcType=INTEGER},
+      </if>
+      <if test="record.hospitalDeptId != null">
+        hospital_dept_id = #{record.hospitalDeptId,jdbcType=INTEGER},
+      </if>
+      <if test="record.nurseCellCode != null">
+        nurse_cell_code = #{record.nurseCellCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.userId != null">
+        user_id = #{record.userId,jdbcType=INTEGER},
+      </if>
+      <if test="record.doctorName != null">
+        doctor_name = #{record.doctorName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.sex != null">
+        sex = #{record.sex,jdbcType=INTEGER},
+      </if>
+      <if test="record.marriage != null">
+        marriage = #{record.marriage,jdbcType=INTEGER},
+      </if>
+      <if test="record.birthday != null">
+        birthday = #{record.birthday,jdbcType=DATE},
+      </if>
+      <if test="record.pcaCode != null">
+        pca_code = #{record.pcaCode,jdbcType=INTEGER},
+      </if>
+      <if test="record.address != null">
+        address = #{record.address,jdbcType=VARCHAR},
+      </if>
+      <if test="record.postCode != null">
+        post_code = #{record.postCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.mobile != null">
+        mobile = #{record.mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="record.intro != null">
+        intro = #{record.intro,jdbcType=VARCHAR},
+      </if>
+      <if test="record.isExpert != null">
+        is_expert = #{record.isExpert,jdbcType=TINYINT},
+      </if>
+      <if test="record.specialty != null">
+        specialty = #{record.specialty,jdbcType=VARCHAR},
+      </if>
+      <if test="record.areaCode != null">
+        area_code = #{record.areaCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.education != null">
+        education = #{record.education,jdbcType=VARCHAR},
+      </if>
+      <if test="record.title != null">
+        title = #{record.title,jdbcType=VARCHAR},
+      </if>
+      <if test="record.duties != null">
+        duties = #{record.duties,jdbcType=VARCHAR},
+      </if>
+      <if test="record.orgCode != null">
+        org_code = #{record.orgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="record.idType != null">
+        id_type = #{record.idType,jdbcType=INTEGER},
+      </if>
+      <if test="record.idNumber != null">
+        id_number = #{record.idNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="record.certificateNo != null">
+        certificate_no = #{record.certificateNo,jdbcType=VARCHAR},
+      </if>
+      <if test="record.idUrl != null">
+        id_url = #{record.idUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.checkState != null">
+        check_state = #{record.checkState,jdbcType=INTEGER},
+      </if>
+      <if test="record.signatureUrl != null">
+        signature_url = #{record.signatureUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.handheldIdUrl != null">
+        handheld_id_url = #{record.handheldIdUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.certificateUrl != null">
+        certificate_url = #{record.certificateUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.imageUrl != null">
+        image_url = #{record.imageUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="record.openId != null">
+        open_id = #{record.openId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.height != null">
+        height = #{record.height,jdbcType=DECIMAL},
+      </if>
+      <if test="record.weight != null">
+        weight = #{record.weight,jdbcType=DECIMAL},
+      </if>
+      <if test="record.bpm != null">
+        bpm = #{record.bpm,jdbcType=VARCHAR},
+      </if>
+      <if test="record.guoHaoMoney != null">
+        guo_hao_money = #{record.guoHaoMoney,jdbcType=INTEGER},
+      </if>
+      <if test="record.sort != null">
+        sort = #{record.sort,jdbcType=INTEGER},
+      </if>
+      <if test="record.status != null">
+        status = #{record.status,jdbcType=TINYINT},
+      </if>
+      <if test="record.description != null">
+        description = #{record.description,jdbcType=VARCHAR},
+      </if>
+      <if test="record.createTime != null">
+        create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.createBy != null">
+        create_by = #{record.createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.updateTime != null">
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="record.updateBy != null">
+        update_by = #{record.updateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="record.messageId != null">
+        message_id = #{record.messageId,jdbcType=VARCHAR},
+      </if>
+      <if test="record.dataId != null">
+        data_id = #{record.dataId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map">
+    update t_doctor
+    set id = #{record.id,jdbcType=INTEGER},
+      code = #{record.code,jdbcType=VARCHAR},
+      hospital_id = #{record.hospitalId,jdbcType=INTEGER},
+      hospital_dept_id = #{record.hospitalDeptId,jdbcType=INTEGER},
+      nurse_cell_code = #{record.nurseCellCode,jdbcType=VARCHAR},
+      user_id = #{record.userId,jdbcType=INTEGER},
+      doctor_name = #{record.doctorName,jdbcType=VARCHAR},
+      sex = #{record.sex,jdbcType=INTEGER},
+      marriage = #{record.marriage,jdbcType=INTEGER},
+      birthday = #{record.birthday,jdbcType=DATE},
+      pca_code = #{record.pcaCode,jdbcType=INTEGER},
+      address = #{record.address,jdbcType=VARCHAR},
+      post_code = #{record.postCode,jdbcType=VARCHAR},
+      mobile = #{record.mobile,jdbcType=VARCHAR},
+      intro = #{record.intro,jdbcType=VARCHAR},
+      is_expert = #{record.isExpert,jdbcType=TINYINT},
+      specialty = #{record.specialty,jdbcType=VARCHAR},
+      area_code = #{record.areaCode,jdbcType=VARCHAR},
+      education = #{record.education,jdbcType=VARCHAR},
+      title = #{record.title,jdbcType=VARCHAR},
+      duties = #{record.duties,jdbcType=VARCHAR},
+      org_code = #{record.orgCode,jdbcType=VARCHAR},
+      id_type = #{record.idType,jdbcType=INTEGER},
+      id_number = #{record.idNumber,jdbcType=VARCHAR},
+      certificate_no = #{record.certificateNo,jdbcType=VARCHAR},
+      id_url = #{record.idUrl,jdbcType=VARCHAR},
+      check_state = #{record.checkState,jdbcType=INTEGER},
+      signature_url = #{record.signatureUrl,jdbcType=VARCHAR},
+      handheld_id_url = #{record.handheldIdUrl,jdbcType=VARCHAR},
+      certificate_url = #{record.certificateUrl,jdbcType=VARCHAR},
+      image_url = #{record.imageUrl,jdbcType=VARCHAR},
+      open_id = #{record.openId,jdbcType=VARCHAR},
+      height = #{record.height,jdbcType=DECIMAL},
+      weight = #{record.weight,jdbcType=DECIMAL},
+      bpm = #{record.bpm,jdbcType=VARCHAR},
+      guo_hao_money = #{record.guoHaoMoney,jdbcType=INTEGER},
+      sort = #{record.sort,jdbcType=INTEGER},
+      status = #{record.status,jdbcType=TINYINT},
+      description = #{record.description,jdbcType=VARCHAR},
+      create_time = #{record.createTime,jdbcType=TIMESTAMP},
+      create_by = #{record.createBy,jdbcType=VARCHAR},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      update_by = #{record.updateBy,jdbcType=VARCHAR},
+      message_id = #{record.messageId,jdbcType=VARCHAR},
+      data_id = #{record.dataId,jdbcType=VARCHAR}
+    <if test="_parameter != null">
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="com.bben.samiservice.model.samiservice.TDoctor">
+    update t_doctor
+    <set>
+      <if test="code != null">
+        code = #{code,jdbcType=VARCHAR},
+      </if>
+      <if test="hospitalId != null">
+        hospital_id = #{hospitalId,jdbcType=INTEGER},
+      </if>
+      <if test="hospitalDeptId != null">
+        hospital_dept_id = #{hospitalDeptId,jdbcType=INTEGER},
+      </if>
+      <if test="nurseCellCode != null">
+        nurse_cell_code = #{nurseCellCode,jdbcType=VARCHAR},
+      </if>
+      <if test="userId != null">
+        user_id = #{userId,jdbcType=INTEGER},
+      </if>
+      <if test="doctorName != null">
+        doctor_name = #{doctorName,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        sex = #{sex,jdbcType=INTEGER},
+      </if>
+      <if test="marriage != null">
+        marriage = #{marriage,jdbcType=INTEGER},
+      </if>
+      <if test="birthday != null">
+        birthday = #{birthday,jdbcType=DATE},
+      </if>
+      <if test="pcaCode != null">
+        pca_code = #{pcaCode,jdbcType=INTEGER},
+      </if>
+      <if test="address != null">
+        address = #{address,jdbcType=VARCHAR},
+      </if>
+      <if test="postCode != null">
+        post_code = #{postCode,jdbcType=VARCHAR},
+      </if>
+      <if test="mobile != null">
+        mobile = #{mobile,jdbcType=VARCHAR},
+      </if>
+      <if test="intro != null">
+        intro = #{intro,jdbcType=VARCHAR},
+      </if>
+      <if test="isExpert != null">
+        is_expert = #{isExpert,jdbcType=TINYINT},
+      </if>
+      <if test="specialty != null">
+        specialty = #{specialty,jdbcType=VARCHAR},
+      </if>
+      <if test="areaCode != null">
+        area_code = #{areaCode,jdbcType=VARCHAR},
+      </if>
+      <if test="education != null">
+        education = #{education,jdbcType=VARCHAR},
+      </if>
+      <if test="title != null">
+        title = #{title,jdbcType=VARCHAR},
+      </if>
+      <if test="duties != null">
+        duties = #{duties,jdbcType=VARCHAR},
+      </if>
+      <if test="orgCode != null">
+        org_code = #{orgCode,jdbcType=VARCHAR},
+      </if>
+      <if test="idType != null">
+        id_type = #{idType,jdbcType=INTEGER},
+      </if>
+      <if test="idNumber != null">
+        id_number = #{idNumber,jdbcType=VARCHAR},
+      </if>
+      <if test="certificateNo != null">
+        certificate_no = #{certificateNo,jdbcType=VARCHAR},
+      </if>
+      <if test="idUrl != null">
+        id_url = #{idUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="checkState != null">
+        check_state = #{checkState,jdbcType=INTEGER},
+      </if>
+      <if test="signatureUrl != null">
+        signature_url = #{signatureUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="handheldIdUrl != null">
+        handheld_id_url = #{handheldIdUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="certificateUrl != null">
+        certificate_url = #{certificateUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="imageUrl != null">
+        image_url = #{imageUrl,jdbcType=VARCHAR},
+      </if>
+      <if test="openId != null">
+        open_id = #{openId,jdbcType=VARCHAR},
+      </if>
+      <if test="height != null">
+        height = #{height,jdbcType=DECIMAL},
+      </if>
+      <if test="weight != null">
+        weight = #{weight,jdbcType=DECIMAL},
+      </if>
+      <if test="bpm != null">
+        bpm = #{bpm,jdbcType=VARCHAR},
+      </if>
+      <if test="guoHaoMoney != null">
+        guo_hao_money = #{guoHaoMoney,jdbcType=INTEGER},
+      </if>
+      <if test="sort != null">
+        sort = #{sort,jdbcType=INTEGER},
+      </if>
+      <if test="status != null">
+        status = #{status,jdbcType=TINYINT},
+      </if>
+      <if test="description != null">
+        description = #{description,jdbcType=VARCHAR},
+      </if>
+      <if test="createTime != null">
+        create_time = #{createTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="createBy != null">
+        create_by = #{createBy,jdbcType=VARCHAR},
+      </if>
+      <if test="updateTime != null">
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updateBy != null">
+        update_by = #{updateBy,jdbcType=VARCHAR},
+      </if>
+      <if test="messageId != null">
+        message_id = #{messageId,jdbcType=VARCHAR},
+      </if>
+      <if test="dataId != null">
+        data_id = #{dataId,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.bben.samiservice.model.samiservice.TDoctor">
+    update t_doctor
+    set code = #{code,jdbcType=VARCHAR},
+      hospital_id = #{hospitalId,jdbcType=INTEGER},
+      hospital_dept_id = #{hospitalDeptId,jdbcType=INTEGER},
+      nurse_cell_code = #{nurseCellCode,jdbcType=VARCHAR},
+      user_id = #{userId,jdbcType=INTEGER},
+      doctor_name = #{doctorName,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=INTEGER},
+      marriage = #{marriage,jdbcType=INTEGER},
+      birthday = #{birthday,jdbcType=DATE},
+      pca_code = #{pcaCode,jdbcType=INTEGER},
+      address = #{address,jdbcType=VARCHAR},
+      post_code = #{postCode,jdbcType=VARCHAR},
+      mobile = #{mobile,jdbcType=VARCHAR},
+      intro = #{intro,jdbcType=VARCHAR},
+      is_expert = #{isExpert,jdbcType=TINYINT},
+      specialty = #{specialty,jdbcType=VARCHAR},
+      area_code = #{areaCode,jdbcType=VARCHAR},
+      education = #{education,jdbcType=VARCHAR},
+      title = #{title,jdbcType=VARCHAR},
+      duties = #{duties,jdbcType=VARCHAR},
+      org_code = #{orgCode,jdbcType=VARCHAR},
+      id_type = #{idType,jdbcType=INTEGER},
+      id_number = #{idNumber,jdbcType=VARCHAR},
+      certificate_no = #{certificateNo,jdbcType=VARCHAR},
+      id_url = #{idUrl,jdbcType=VARCHAR},
+      check_state = #{checkState,jdbcType=INTEGER},
+      signature_url = #{signatureUrl,jdbcType=VARCHAR},
+      handheld_id_url = #{handheldIdUrl,jdbcType=VARCHAR},
+      certificate_url = #{certificateUrl,jdbcType=VARCHAR},
+      image_url = #{imageUrl,jdbcType=VARCHAR},
+      open_id = #{openId,jdbcType=VARCHAR},
+      height = #{height,jdbcType=DECIMAL},
+      weight = #{weight,jdbcType=DECIMAL},
+      bpm = #{bpm,jdbcType=VARCHAR},
+      guo_hao_money = #{guoHaoMoney,jdbcType=INTEGER},
+      sort = #{sort,jdbcType=INTEGER},
+      status = #{status,jdbcType=TINYINT},
+      description = #{description,jdbcType=VARCHAR},
+      create_time = #{createTime,jdbcType=TIMESTAMP},
+      create_by = #{createBy,jdbcType=VARCHAR},
+      update_time = #{updateTime,jdbcType=TIMESTAMP},
+      update_by = #{updateBy,jdbcType=VARCHAR},
+      message_id = #{messageId,jdbcType=VARCHAR},
+      data_id = #{dataId,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

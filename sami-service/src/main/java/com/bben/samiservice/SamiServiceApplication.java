@@ -1,5 +1,6 @@
 package com.bben.samiservice;
 
+import com.bben.samiservice.controller.SocketServer;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cache.annotation.EnableCaching;
@@ -24,6 +25,9 @@ public class SamiServiceApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(SamiServiceApplication.class, args);
+        //起socket服务
+        SocketServer server = new SocketServer();
+        server.startSocketServer(12391);
     }
 
 }
