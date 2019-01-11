@@ -75,27 +75,7 @@
                 </table>
                -->
 
-        <table tableName="t_dept">
-            <!--&lt;!&ndash;mysql 配置 &ndash;&gt;-->
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-        </table>
-
-        <!--<table tableName="t_doctor">
-            &lt;!&ndash;&lt;!&ndash;mysql 配置 &ndash;&gt;&ndash;&gt;
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-        </table>-->
-
-        <!--<table tableName="t_nurse">
-            &lt;!&ndash;&lt;!&ndash;mysql 配置 &ndash;&gt;&ndash;&gt;
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-        </table>-->
-
-        <!--<table tableName="t_patient">
-            &lt;!&ndash;&lt;!&ndash;mysql 配置 &ndash;&gt;&ndash;&gt;
-            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
-        </table>-->
-
-        <!--<table tableName="t_sickroom">
+        <!--<table tableName="t_dept">
             &lt;!&ndash;&lt;!&ndash;mysql 配置 &ndash;&gt;&ndash;&gt;
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>-->
@@ -110,7 +90,37 @@
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>-->
 
-        <!--<table tableName="t_patient_bed">
+        <!--<table tableName="t_patient">
+            &lt;!&ndash;&lt;!&ndash;mysql 配置 &ndash;&gt;&ndash;&gt;
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>
+
+        <table tableName="t_nurse_level">
+            &lt;!&ndash;&lt;!&ndash;mysql 配置 &ndash;&gt;&ndash;&gt;
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>-->
+
+        <!--<table tableName="t_patient">
+            &lt;!&ndash;&lt;!&ndash;mysql 配置 &ndash;&gt;&ndash;&gt;
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>-->
+
+        <!--<table tableName="t_nurse_level">
+            &lt;!&ndash;&lt;!&ndash;mysql 配置 &ndash;&gt;&ndash;&gt;
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>-->
+
+        <!--<table tableName="t_patient_nurse_ref">
+            &lt;!&ndash;&lt;!&ndash;mysql 配置 &ndash;&gt;&ndash;&gt;
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>-->
+
+        <!--<table tableName="t_nurse">
+            &lt;!&ndash;&lt;!&ndash;mysql 配置 &ndash;&gt;&ndash;&gt;
+            <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
+        </table>-->
+
+        <!--<table tableName="t_notice">
             &lt;!&ndash;&lt;!&ndash;mysql 配置 &ndash;&gt;&ndash;&gt;
             <generatedKey column="id" sqlStatement="Mysql" identity="true"/>
         </table>-->
