@@ -1,10 +1,7 @@
 package com.bben.infusion.config;
 
-/*
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.stereotype.Component;
-import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.server.standard.ServerEndpointExporter;
 
 //此处需要注意，仅使用应用文件启动项目才使用此配置。
@@ -15,4 +12,4 @@ public class WebSocketConfig {
     public ServerEndpointExporter serverEndpointExporter() {
         return new ServerEndpointExporter();
     }
-}*/
+}

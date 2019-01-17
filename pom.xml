@@ -20,6 +20,7 @@
         <module>LongConnection-Service</module>
         <module>web-service</module>
         <module>sami-service</module>
+        <module>nurseboard-service</module>
     </modules>
 
     <parent>

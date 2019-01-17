@@ -16,6 +16,8 @@
         <module name="LongConnection" />
         <module name="LongConnection-Service" />
         <module name="medical-service" />
+        <module name="nurseboard-service" />
+        <module name="sami-service" />
         <module name="task-service" />
         <module name="turbine-service" />
         <module name="web-service" />
@@ -24,6 +26,7 @@
     <bytecodeTargetLevel>
       <module name="infusion-monitor" target="1.8" />
       <module name="test" target="1.5" />
+      <module name="test-service" target="1.8" />
       <module name="webservice-service" target="1.8" />
     </bytecodeTargetLevel>
   </component>

@@ -3,13 +3,29 @@
   <component name="BookmarkManager">
     <bookmark url="file://$PROJECT_DIR$/infusion/equipment-service/src/main/java/com/bben/equipment/netty/EquipmentClientHandler.java" description="continue;" line="131" />
     <bookmark url="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/constants/ReturnMessage.java" line="16" />
+    <bookmark url="file://$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/controller/SocketServer.java" line="211" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d533b586-1240-4a78-9ec7-c03b3be5b538" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="d533b586-1240-4a78-9ec7-c03b3be5b538" name="Default" comment="shell脚本+sql">
+      <change afterPath="$PROJECT_DIR$/logs/spring.log.2018-12-15.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/spring.log.2018-12-18.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/spring.log.2018-12-19.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/spring.log.2018-12-20.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/spring.log.2019-01-09.0.gz" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs/spring.log.2019-01-10.0.gz" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/infusion/infusion-service/infusion-service.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/infusion/infusion.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/bedcard-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/bedcard-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/src/main/java/com/bben/common/entity/vo/Result.java" beforeDir="false" afterPath="$PROJECT_DIR$/common/src/main/java/com/bben/common/entity/vo/Result.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infusion/infusion-service/src/main/java/com/bben/infusion/config/WebSocketConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/infusion/infusion-service/src/main/java/com/bben/infusion/config/WebSocketConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/infusion/infusion-service/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/infusion/infusion-service/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs/spring.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs/spring.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/service/impl/NurseBoardServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/service/impl/NurseBoardServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/vo/PatientVo.java" beforeDir="false" afterPath="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/vo/PatientVo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/SamiServiceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/SamiServiceApplication.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -31,6 +47,9 @@
     <ignored path="$PROJECT_DIR$/webservice-service/target/" />
     <ignored path="$PROJECT_DIR$/test/target/" />
     <ignored path="$PROJECT_DIR$/web-service/target/" />
+    <ignored path="$PROJECT_DIR$/test-service/target/" />
+    <ignored path="$PROJECT_DIR$/sami-service/target/" />
+    <ignored path="$PROJECT_DIR$/nurseboard-service/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -112,24 +131,173 @@
     <session id="-189645125">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="8" />
           <entry key="project.open.time.1" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.15" value="1" />
+          <entry key="project.open.time.29" value="2" />
+          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.34" value="1" />
+          <entry key="project.open.time.35" value="1" />
+          <entry key="project.open.time.36" value="1" />
+          <entry key="project.open.time.37" value="1" />
+          <entry key="project.open.time.38" value="3" />
+          <entry key="project.open.time.39" value="1" />
+          <entry key="project.open.time.51" value="1" />
+          <entry key="project.open.time.56" value="1" />
+          <entry key="project.opened" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="yml" value="1" />
+          <entry key="dummy" value="37" />
+          <entry key="java" value="9970" />
+          <entry key="txt" value="135" />
+          <entry key="xml" value="170" />
+          <entry key="yml" value="252" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="YAML" value="1" />
+          <entry key="JAVA" value="9970" />
+          <entry key="PLAIN_TEXT" value="172" />
+          <entry key="XML" value="170" />
+          <entry key="YAML" value="252" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="class" value="10" />
+          <entry key="html" value="5" />
+          <entry key="iml" value="1" />
+          <entry key="java" value="400" />
+          <entry key="properties" value="2" />
+          <entry key="xml" value="102" />
+          <entry key="xpath" value="1" />
+          <entry key="yml" value="43" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="CLASS" value="10" />
+          <entry key="HTML" value="5" />
+          <entry key="IDEA_MODULE" value="1" />
+          <entry key="JAVA" value="400" />
+          <entry key="Properties" value="2" />
+          <entry key="XML" value="102" />
+          <entry key="XPath" value="1" />
+          <entry key="YAML" value="43" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/vo/NurseBoardPatientVo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="422">
+              <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/vo/PatientVo.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-224">
+              <caret line="20" column="19" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="19" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/resources/application.yml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="95">
+              <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/NurseboardServiceApplication.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="285">
+              <caret line="24" selection-start-line="24" selection-end-line="24" />
+              <folding>
+                <element signature="e#864#865#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/TDeptController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="54">
+              <caret line="99" column="68" selection-start-line="99" selection-start-column="60" selection-end-line="99" selection-end-column="68" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/controller/NurseBoardController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="624">
+              <caret line="34" column="77" selection-start-line="34" selection-start-column="77" selection-end-line="34" selection-end-column="77" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/service/NurseBoardService.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/service/impl/NurseBoardServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="140">
+              <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/common/src/main/java/com/bben/common/constants/Status.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="209">
+              <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/TDeptServiceImpl.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="456">
+              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -141,43 +309,38 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Question</find>
-      <find>问题</find>
-      <find>dept</find>
-      <find>net.sf.json</find>
-      <find>/ward</find>
-      <find>Dept</find>
-      <find>病人</find>
-      <find>Patient</find>
-      <find>sick</find>
-      <find>ward</find>
-      <find>bed</find>
-      <find>doct</find>
-      <find>HystrixCommand</find>
-      <find>6379</find>
-      <find>proxyRequestHelper</find>
-      <find>spring-cloud-commons</find>
-      <find>2.1.0</find>
-      <find>andStatusEqualTo</find>
-      <find>tDeptMapper</find>
-      <find>自己调自己</find>
-      <find>post</find>
-      <find>jsonDeptInfo</find>
-      <find>jsonDoctorInfo</find>
-      <find>jsonPatientInfo</find>
-      <find>jsonWardInfo</find>
-      <find>jsonNurseInfo</find>
-      <find>jsonStr</find>
-      <find>jsonHospitalDeptInfo</find>
-      <find>byte</find>
-      <find>netty</find>
+      <find>webserviceDataSource</find>
+      <find>security</find>
+      <find>thymeleaf</find>
+      <find>sess</find>
+      <find>transmission</find>
+      <find>websocket</find>
+      <find>DskipTests</find>
+      <find>web-service</find>
+      <find>4000</find>
+      <find>3000</find>
+      <find>ribbon</find>
+      <find>eu</find>
+      <find>feign</find>
+      <find>‘</find>
+      <find>log</find>
+      <find>Result</find>
+      <find>GBK</find>
+      <find>Integer</find>
+      <find>status</find>
+      <find>web</find>
+      <find>sami</find>
+      <find>sa</find>
+      <find>nurseboardserviceSqlSessionFactory</find>
+      <find>medicalSqlSessionFactory</find>
+      <find>updateByExample</find>
+      <find>Example_Where_Clause</find>
+      <find>updateByPrimaryKey</find>
+      <find>deleteByPrimaryKey</find>
+      <find>updateByExampleSelective</find>
+      <find>getTDeptVoByCondition</find>
     </findStrings>
     <replaceStrings>
-      <replace>sqlBedcard</replace>
-      <replace>bedcard</replace>
-      <replace>视频</replace>
-      <replace>tVideo</replace>
-      <replace>TVideo</replace>
       <replace>videoId</replace>
       <replace>TDrugsDose</replace>
       <replace>drugsDoseId</replace>
@@ -193,7 +356,6 @@
       <replace>hospitalizationExpensesDay</replace>
       <replace>日住院费用</replace>
       <replace>收费详情</replace>
-      <replace />
       <replace>webservice</replace>
       <replace>Ward</replace>
       <replace>病区</replace>
@@ -203,6 +365,12 @@
       <replace>Nurse</replace>
       <replace>sickroom</replace>
       <replace>jsonInfo</replace>
+      <replace />
+      <replace>samiserviceSqlSessionFactory</replace>
+      <replace>samiservice</replace>
+      <replace>'</replace>
+      <replace>UTF-8</replace>
+      <replace>nurseboard</replace>
     </replaceStrings>
     <dirStrings>
       <dir>D:\work_space\bedcard-service\src\main\java\com\bben\bedcard\controller</dir>
@@ -221,6 +389,13 @@
       <dir>D:\work_space\medical-service</dir>
       <dir>D:\work_space</dir>
       <dir>D:\work_space\LongConnection-Service</dir>
+      <dir>D:\medical\medical-service</dir>
+      <dir>D:\medical\bedcard-service</dir>
+      <dir>D:\medical\web-service</dir>
+      <dir>D:\medical\infusion\infusion-service\src\main\java\com\bben\infusion\transmission</dir>
+      <dir>D:\medical\infusion</dir>
+      <dir>D:\medical\sami-service</dir>
+      <dir>D:\medical</dir>
     </dirStrings>
   </component>
   <component name="Git.Settings">
@@ -229,57 +404,57 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/dto/THospitalDto.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/THospitalServiceImpl.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/resources/mapper/bedcard/TSickroomMapper.xml" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/TSickroomService.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/TSickroomServiceImpl.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/TBedServiceImpl.java" />
-        <option value="$PROJECT_DIR$/infusion/infusion-service/src/main/java/com/bben/infusion/config/WebSocketConfig.java" />
-        <option value="$PROJECT_DIR$/infusion/infusion-service/src/test/java/MailMQTest.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/constants/MessageType.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/controller/TestController.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/Dto/TNurstDto.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/Dto/TNurseDto.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/constants/EmployeeType.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/service/TDeptService.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/service/impl/TDeptServiceImpl.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/service/TDoctorService.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/service/TNurseService.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/controller/DeptController.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/Dto/DoctorDto.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/service/impl/TDoctorServiceImpl.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/service/impl/TNurseServiceImpl.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/Dto/NurseDto.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/service/TSickroomService.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/service/impl/TSickroomServiceImpl.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/service/TWardService.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/service/TBedService.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/resources/generator/SamiserviceGeneratorConfig.xml" />
+        <option value="$PROJECT_DIR$/sami-service/pom.xml" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/service/impl/TBedServiceImpl.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/util/SaMiMethodUtil.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/Dto/PatientDto.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/controller/PatientController.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/service/impl/TWardServiceImpl.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/model/bedcard/TDept.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/dto/TDoctorDto.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/model/bedcard/TDoctor.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/resources/mapper/bedcard/TDoctorMapper.xml" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/vo/TDoctorBrieflyVo.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/vo/TDoctorVo.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/DoctorController.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/HospitalDeptController.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/resources/generator/BedCardGeneratorConfig.xml" />
-        <option value="$PROJECT_DIR$/medical-service/src/main/java/com/bben/medical/controller/GradeController.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/constants/HeadMethod.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/dto/TDeptDto.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/bben/common/entity/vo/Result.java" />
-        <option value="$PROJECT_DIR$/common/src/main/java/com/bben/common/constants/OperationType.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/constants/ReturnMessage.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/vo/TDeptVo.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/TDeptService.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/TDoctorService.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/TDoctorServiceImpl.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/THospitalDeptService.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/TDeptServiceImpl.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/THospitalDeptServiceImpl.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/TNurseService.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/TNurseServiceImpl.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/TPatientService.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/TPatientServiceImpl.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/dto/HeadDto.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/sami/SaMiDoctorController.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/sami/SaMiNurseController.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/sami/SaMiPatientController.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/TWardService.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/TWardServiceImpl.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/sami/SaMiDeptController.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/sami/SaMiHospitalDeptController.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/sami/SaMiWardController.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/sami/HeadController.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/TPatientDoctorRefService.java" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/TPatientDoctorRefServiceImpl.java" />
-        <option value="$PROJECT_DIR$/eureka-service/pom.xml" />
-        <option value="$PROJECT_DIR$/gateway-service/pom.xml" />
-        <option value="$PROJECT_DIR$/bedcard-service/pom.xml" />
-        <option value="$PROJECT_DIR$/bedcard-service/src/main/resources/application.yml" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/resources/application-prod.yml" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/resources/application-test.yml" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/common/LogSqlQueryInterceptor.java" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/NurseboardServiceApplication.java" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/config/mutildb/MySqlDataSourceConfig.java" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/config/AOPConfig.java" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/config/Swagger2.java" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/constants/MessageType.java" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/constants/EmployeeType.java" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/service/impl/NurseBoardService.java" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/util/NurseboardUtil.java" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/vo/patientVo.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/SamiServiceApplication.java" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/service/NurseBoardService.java" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/constants/ReturnMessage.java" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/controller/NurseBoardController.java" />
+        <option value="$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/controller/SocketServer.java" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/resources/generator/NurseboardserviceGeneratorConfig.xml" />
+        <option value="$PROJECT_DIR$/nurseboard-service/pom.xml" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/vo/NurseBoardPatientVo.java" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/config/CacheConfig.java" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/vo/PatientVo.java" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/service/impl/NurseBoardServiceImpl.java" />
+        <option value="$PROJECT_DIR$/nurseboard-service/src/main/resources/application.yml" />
       </list>
     </option>
   </component>
@@ -308,11 +483,11 @@
       <expand>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="bedcard-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="nurseboard-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
         </path>
         <path>
           <item name="" type="16c1761:MavenProjectsStructure$RootNode" />
-          <item name="bedcard-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
+          <item name="nurseboard-service" type="9519ce18:MavenProjectsStructure$ProjectNode" />
           <item name="Lifecycle" type="58874e2:MavenProjectsStructure$LifecycleNode" />
         </path>
       </expand>
@@ -320,8 +495,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-6" />
-    <option name="y" value="1" />
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
     <option name="width" value="1036" />
     <option name="height" value="733" />
   </component>
@@ -342,7 +517,7 @@
         </expanded-state>
         <selected-state>
           <State>
-            <id>AlibabaSwitchStatement</id>
+            <id>AlibabaAbstractMethodOrInterfaceMethodMustUseJavadoc</id>
           </State>
         </selected-state>
       </profile-state>
@@ -357,6 +532,8 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -367,14 +544,81 @@
             <path>
               <item name="medical" type="b2602c69:ProjectViewProjectNode" />
               <item name="medical" type="462c0819:PsiDirectoryNode" />
-              <item name="bedcard-service" type="462c0819:PsiDirectoryNode" />
+              <item name="nurseboard-service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="medical" type="b2602c69:ProjectViewProjectNode" />
+              <item name="medical" type="462c0819:PsiDirectoryNode" />
+              <item name="nurseboard-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="medical" type="b2602c69:ProjectViewProjectNode" />
+              <item name="medical" type="462c0819:PsiDirectoryNode" />
+              <item name="nurseboard-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="medical" type="b2602c69:ProjectViewProjectNode" />
+              <item name="medical" type="462c0819:PsiDirectoryNode" />
+              <item name="nurseboard-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="medical" type="b2602c69:ProjectViewProjectNode" />
+              <item name="medical" type="462c0819:PsiDirectoryNode" />
+              <item name="nurseboard-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="nurseboardservice" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="medical" type="b2602c69:ProjectViewProjectNode" />
+              <item name="medical" type="462c0819:PsiDirectoryNode" />
+              <item name="nurseboard-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="nurseboardservice" type="462c0819:PsiDirectoryNode" />
+              <item name="controller" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="medical" type="b2602c69:ProjectViewProjectNode" />
+              <item name="medical" type="462c0819:PsiDirectoryNode" />
+              <item name="nurseboard-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="nurseboardservice" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="medical" type="b2602c69:ProjectViewProjectNode" />
+              <item name="medical" type="462c0819:PsiDirectoryNode" />
+              <item name="nurseboard-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="nurseboardservice" type="462c0819:PsiDirectoryNode" />
+              <item name="service" type="462c0819:PsiDirectoryNode" />
+              <item name="impl" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="medical" type="b2602c69:ProjectViewProjectNode" />
+              <item name="medical" type="462c0819:PsiDirectoryNode" />
+              <item name="nurseboard-service" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -382,32 +626,32 @@
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="SearchEverywhereHistoryKey" value="Slf4JLogger&#9;PSI&#9;JAVA://io.netty.util.internal.logging.Slf4JLogger&#10;TDoctorMapper&#9;FILE&#9;file://D:/work_space/bedcard-service/src/main/resources/mapper/bedcard/TDoctorMapper.xml&#10;TBedMapper&#9;FILE&#9;file://D:/work_space/bedcard-service/src/main/resources/mapper/bedcard/TBedMapper.xml&#10;WebSocketConfig&#9;PSI&#9;JAVA://com.bben.infusion.config.WebSocketConfig&#10;LogSqlQueryInterceptor&#9;PSI&#9;JAVA://com.bben.bedcard.common.LogSqlQueryInterceptor&#10;RegisterRequest&#9;FILE&#9;file://D:/work_space/LongConnection-Service/src/main/java/netty/protocol/RegisterRequest.java&#10;MsgType&#9;FILE&#9;file://D:/work_space/LongConnection-Service/src/main/java/netty/base/MsgType.java&#10;THospitalServiceImpl&#9;PSI&#9;JAVA://com.bben.bedcard.service.impl.THospitalServiceImpl&#10;Regis&#9;PSI&#9;JAVA://netty.protocol.RegisterRequest&#10;Base&#9;FILE&#9;file://D:/work_space/LongConnection-Service/src/main/java/netty/base/BaseMsg.java&#10;log-dev&#9;FILE&#9;file://D:/work_space/bedcard-service/src/main/resources/log-dev.xml&#10;Application&#9;FILE&#9;file://D:/work_space/gateway-service/src/main/resources/application.yml&#10;RedisTemplateUtil&#9;PSI&#9;JAVA://com.bben.medical.config.MvcConfigurer#redisTemplateUtil" />
+    <property name="SearchEverywhereHistoryKey" value="MySqlDataSourceConfig&#9;FILE&#9;file://D:/medical/nurseboard-service/src/main/java/com/bben/nurseboardservice/config/mutildb/MySqlDataSourceConfig.java&#10;HeadMethod&#9;PSI&#9;JAVA://com.bben.bedcard.constants.HeadMethod&#10;ReturnMessage&#9;PSI&#9;JAVA://com.bben.bedcard.constants.ReturnMessage&#10;Slf4JLogger&#9;PSI&#9;JAVA://io.netty.util.internal.logging.Slf4JLogger&#10;TDoctorMapper&#9;FILE&#9;file://D:/work_space/bedcard-service/src/main/resources/mapper/bedcard/TDoctorMapper.xml&#10;TBedMapper&#9;FILE&#9;file://D:/work_space/bedcard-service/src/main/resources/mapper/bedcard/TBedMapper.xml&#10;WebSocketConfig&#9;PSI&#9;JAVA://com.bben.infusion.config.WebSocketConfig&#10;LogSqlQueryInterceptor&#9;PSI&#9;JAVA://com.bben.bedcard.common.LogSqlQueryInterceptor&#10;RegisterRequest&#9;FILE&#9;file://D:/work_space/LongConnection-Service/src/main/java/netty/protocol/RegisterRequest.java&#10;MsgType&#9;FILE&#9;file://D:/work_space/LongConnection-Service/src/main/java/netty/base/MsgType.java&#10;THospitalServiceImpl&#9;PSI&#9;JAVA://com.bben.bedcard.service.impl.THospitalServiceImpl&#10;Regis&#9;PSI&#9;JAVA://netty.protocol.RegisterRequest&#10;Base&#9;FILE&#9;file://D:/work_space/LongConnection-Service/src/main/java/netty/base/BaseMsg.java&#10;log-dev&#9;FILE&#9;file://D:/work_space/bedcard-service/src/main/resources/log-dev.xml&#10;Application&#9;FILE&#9;file://D:/work_space/gateway-service/src/main/resources/application.yml&#10;RedisTemplateUtil&#9;PSI&#9;JAVA://com.bben.medical.config.MvcConfigurer#redisTemplateUtil" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1544867052177" />
-    <property name="last_opened_file_path" value="D:/xyb/xybProject" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547710926049" />
+    <property name="last_opened_file_path" value="D:/java解析HL7/hl7 HL7 JAVA解析版本/hl7/hapi-dist-2.2-all/lib" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.last.edited" value="Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.41494253" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.bben.webservice.config" />
-      <recent name="com.bben.webservice.service.impl" />
-      <recent name="com.bben.webservice.service" />
-      <recent name="com.bben.webservice.model.webservice" />
-      <recent name="com.bben.webservice.client" />
+      <recent name="com.bben.nurseboardservice.common" />
+      <recent name="com.bben.samiservice.constants" />
+      <recent name="com.bben.samiservice.controller" />
+      <recent name="com.bben.config" />
+      <recent name="com.bben.samiservice.config" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\work_space\web-service\src\main\java\com\bben\webservice" />
-      <recent name="D:\work_space\web-service\src\main\resources" />
-      <recent name="D:\work_space" />
-      <recent name="D:\work_space\web-service\src\main\java\com\bben\webservice\webservice" />
-      <recent name="D:\work_space\webservice-service\src\main\resources" />
+      <recent name="D:\medical\nurseboard-service\src\main\java\com\bben\nurseboardservice" />
+      <recent name="D:\medical\nurseboard-service\src\main\resources" />
+      <recent name="D:\medical\sami-service\src\main\java\com\bben\samiservice" />
+      <recent name="D:\medical\sami-service\src\main\java\com\bben\samiservice\controller" />
+      <recent name="D:\medical\sami-service\src\main\java\com\bben\samiservice\converter" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -422,14 +666,14 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Spring Boot.BedCardMainApplication">
-    <configuration name="NettyClientBootstrap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="netty.NettyClientBootstrap" />
-      <module name="LongConnection" />
+  <component name="RunManager" selected="Spring Boot.NurseboardServiceApplication">
+    <configuration name="Client" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bben.samiservice.socket.Client" />
+      <module name="sami-service" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="netty.*" />
+          <option name="PATTERN" value="com.bben.samiservice.socket.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -437,13 +681,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="NettyServerBootstrap" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="netty.NettyServerBootstrap" />
-      <module name="LongConnection" />
+    <configuration name="SaMiMethodUtil" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bben.samiservice.util.SaMiMethodUtil" />
+      <module name="sami-service" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="netty.*" />
+          <option name="PATTERN" value="com.bben.samiservice.util.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -451,13 +695,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SendMsgNoticeNettyClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="netty.SendMsgNoticeNettyClient" />
-      <module name="LongConnection" />
+    <configuration name="TestController" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bben.samiservice.controller.TestController" />
+      <module name="sami-service" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="netty.*" />
+          <option name="PATTERN" value="com.bben.samiservice.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -465,13 +709,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WebserviceClient" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="com.bben.webservice.controller.WebserviceClient" />
-      <module name="web-service" />
+    <configuration name="TestHL7" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.bben.bedcard.controller.TestHL7" />
+      <module name="bedcard-service" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
         <pattern>
-          <option name="PATTERN" value="com.bben.webservice.controller.*" />
+          <option name="PATTERN" value="com.bben.bedcard.controller.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -557,6 +801,32 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="NurseboardServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="nurseboard-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bben.nurseboardservice.NurseboardServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="UPDATE_ACTION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SamiServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="sami-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bben.samiservice.SamiServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SamiServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
+      <module name="sami-service" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.bben.samiservice.SamiServiceApplication" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="TaskServiceApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="task-service" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.bben.TaskServiceApplication" />
@@ -597,19 +867,21 @@
       <item itemvalue="Spring Boot.EquipmentServiceApplication" />
       <item itemvalue="Spring Boot.InfusionMainApplication" />
       <item itemvalue="Spring Boot.WebServiceMainApplication" />
-      <item itemvalue="Application.NettyServerBootstrap" />
-      <item itemvalue="Application.NettyClientBootstrap" />
-      <item itemvalue="Application.SendMsgNoticeNettyClient" />
-      <item itemvalue="Application.WebserviceClient" />
+      <item itemvalue="Spring Boot.SamiServiceApplication" />
+      <item itemvalue="Spring Boot.NurseboardServiceApplication" />
+      <item itemvalue="Application.TestHL7" />
+      <item itemvalue="Application.Client" />
+      <item itemvalue="Application.TestController" />
+      <item itemvalue="Application.SaMiMethodUtil" />
       <item itemvalue="Spring Boot.BedCardMainApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.SaMiMethodUtil" />
+        <item itemvalue="Application.TestController" />
         <item itemvalue="Spring Boot.BedCardMainApplication" />
-        <item itemvalue="Application.WebserviceClient" />
-        <item itemvalue="Application.NettyClientBootstrap" />
-        <item itemvalue="Application.NettyServerBootstrap" />
-        <item itemvalue="Application.SendMsgNoticeNettyClient" />
+        <item itemvalue="Application.Client" />
+        <item itemvalue="Application.TestHL7" />
       </list>
     </recent_temporary>
   </component>
@@ -679,7 +951,21 @@
       <workItem from="1544780036615" duration="64000" />
       <workItem from="1544780455078" duration="7811000" />
       <workItem from="1544863213665" duration="1715000" />
-      <workItem from="1544866387136" duration="617000" />
+      <workItem from="1544866387136" duration="961000" />
+      <workItem from="1545010374193" duration="39406000" />
+      <workItem from="1545125586247" duration="34414000" />
+      <workItem from="1545299528239" duration="73000" />
+      <workItem from="1545701874797" duration="75198000" />
+      <workItem from="1545975270448" duration="5854000" />
+      <workItem from="1546053264277" duration="2192000" />
+      <workItem from="1546414587733" duration="4265000" />
+      <workItem from="1546507345467" duration="2275000" />
+      <workItem from="1546831733937" duration="13618000" />
+      <workItem from="1546859021413" duration="6510000" />
+      <workItem from="1546953903070" duration="1636000" />
+      <workItem from="1547001831139" duration="22472000" />
+      <workItem from="1547104433956" duration="7542000" />
+      <workItem from="1547705372996" duration="2991000" />
     </task>
     <task id="LOCAL-00001">
       <created>1540778368157</created>
@@ -870,16 +1156,74 @@
       <option name="project" value="LOCAL" />
       <updated>1543311682351</updated>
     </task>
-    <option name="localTasksCounter" value="28" />
+    <task id="LOCAL-00028" summary="shell脚本+sql">
+      <created>1544867277035</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1544867277035</updated>
+    </task>
+    <task id="LOCAL-00029" summary="萨米接口(开发一半)">
+      <created>1545098422554</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1545098422554</updated>
+    </task>
+    <task id="LOCAL-00030" summary="新增sami-service，为萨米医疗提供接口(webstock服务)">
+      <created>1545098580666</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1545098580666</updated>
+    </task>
+    <task id="LOCAL-00031" summary="sami-websocket">
+      <created>1545188062830</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1545188062831</updated>
+    </task>
+    <task id="LOCAL-00032" summary="sami-service">
+      <created>1546832298404</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1546832298405</updated>
+    </task>
+    <task id="LOCAL-00033" summary="nurseboard-service">
+      <created>1546843418399</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1546843418399</updated>
+    </task>
+    <task id="LOCAL-00034" summary="护理看板服务">
+      <created>1547197330812</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1547197330812</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="604363000" />
+    <option name="totallyTimeSpent" value="823153000" />
+  </component>
+  <component name="TodoView">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.44871795" visible="true" weight="0.30170575" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.44871795" visible="true" weight="0.1881663" />
       <window_info id="Structure" order="1" sideWeight="0.55128205" side_tool="true" weight="0.2857143" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -887,21 +1231,21 @@
       <window_info id="Web" order="5" sideWeight="0.58942455" side_tool="true" weight="0.2793177" />
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info id="Capture Tool" order="7" />
-      <window_info anchor="bottom" id="Spring" order="0" weight="0.329718" />
-      <window_info anchor="bottom" id="Terminal" order="1" />
-      <window_info anchor="bottom" x="0" y="301" width="1600" height="258" id="Run" order="2" sideWeight="0.49733475" weight="0.36984816" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4989154" />
+      <window_info anchor="bottom" id="Spring" order="0" weight="0.32899022" />
+      <window_info anchor="bottom" id="Terminal" order="1" weight="0.32899022" />
+      <window_info anchor="bottom" x="0" y="301" width="1600" height="258" id="Run" order="2" sideWeight="0.49733475" weight="0.4277959" />
+      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.4256243" />
       <window_info anchor="bottom" id="Java Enterprise" order="4" />
       <window_info anchor="bottom" id="Database Changes" order="5" show_stripe_button="false" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32899022" />
       <window_info anchor="bottom" id="Message" order="7" />
       <window_info anchor="bottom" id="Find" order="8" weight="0.3286334" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5026652" side_tool="true" weight="0.36984816" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5026652" side_tool="true" weight="0.36916396" />
       <window_info anchor="bottom" id="Cvs" order="10" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="11" weight="0.4" />
-      <window_info anchor="bottom" id="Messages" order="12" sideWeight="0.48507464" weight="0.3286334" />
-      <window_info anchor="bottom" id="Version Control" order="13" weight="0.32247558" />
-      <window_info anchor="right" id="Maven Projects" order="0" visible="true" weight="0.1444563" />
+      <window_info anchor="bottom" id="Version Control" order="12" weight="0.32247558" />
+      <window_info anchor="bottom" id="Messages" order="13" sideWeight="0.48507464" weight="0.32790446" />
+      <window_info anchor="right" id="Maven Projects" order="0" visible="true" weight="0.14285715" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="2" />
       <window_info anchor="right" id="Database" order="3" />
@@ -920,358 +1264,414 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="shell脚本+sql" />
+    <MESSAGE value="萨米接口(开发一半)" />
+    <MESSAGE value="新增sami-service，为萨米医疗提供接口(webstock服务)" />
+    <MESSAGE value="sami-websocket" />
+    <MESSAGE value="sami-service" />
+    <MESSAGE value="nurseboard-service" />
+    <MESSAGE value="护理看板服务" />
+    <option name="LAST_COMMIT_MESSAGE" value="护理看板服务" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/TestHL7.java</url>
+          <line>137</line>
+          <properties />
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/controller/TestController.java</url>
+          <line>27</line>
+          <properties />
+          <option name="timeStamp" value="19" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/controller/SocketServer.java</url>
+          <line>131</line>
+          <properties />
+          <option name="timeStamp" value="42" />
+        </line-breakpoint>
+      </breakpoints>
+      <breakpoints-dialog>
+        <breakpoints-dialog />
+      </breakpoints-dialog>
+    </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://D:/repository/org/springframework/spring-aop/5.0.9.RELEASE/spring-aop-5.0.9.RELEASE.jar!/org/springframework/aop/aspectj/MethodInvocationProceedingJoinPoint.class">
+    <entry file="file://$PROJECT_DIR$/sami-service/src/main/resources/mapper/samiservice/TDeptMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="47" column="55" selection-start-line="47" selection-start-column="55" selection-end-line="47" selection-end-column="55" />
+        <state relative-caret-position="70">
+          <caret line="314" column="2" selection-start-line="314" selection-start-column="2" selection-end-line="314" selection-end-column="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/bben/common/entity/vo/Result.java">
+    <entry file="file://$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/converter/HL7ToXmlConverter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="28" column="10" selection-start-line="28" selection-start-column="10" selection-end-line="28" selection-end-column="10" />
+        <state relative-caret-position="3287">
+          <caret line="196" column="12" selection-start-line="196" selection-start-column="12" selection-end-line="196" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/vo/TDeptVo.java">
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/mapper/nurseboardservice/TDeptMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="322">
-          <caret line="39" column="5" lean-forward="true" selection-start-line="39" selection-start-column="5" selection-end-line="39" selection-end-column="5" />
+        <state relative-caret-position="76">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/bben/common/constants/Status.java">
+    <entry file="file://$PROJECT_DIR$/eureka-service/src/main/java/com/bben/EurekaServiceApplication.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="16" column="11" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="11" />
+        <state relative-caret-position="114">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/TDoctorService.java">
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/constants/ReturnMessage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+        <state relative-caret-position="494">
+          <caret line="26" column="48" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="48" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/TDoctorServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/mapper/nurseboardservice/TWardMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="236" selection-start-line="236" selection-end-line="236" />
+        <state relative-caret-position="-53">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/TDeptService.java">
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/model/nurseboardservice/TNurseLevel.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+        <state relative-caret-position="-1250">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/THospitalDeptService.java">
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/model/nurseboardservice/TNurseLevelExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="74" column="8" selection-start-line="74" selection-start-column="8" selection-end-line="74" selection-end-column="8" />
+        <state relative-caret-position="-15101">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/THospitalDeptServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/model/nurseboardservice/TPatientExample.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="284">
-          <caret line="219" column="69" selection-start-line="219" selection-start-column="69" selection-end-line="219" selection-end-column="69" />
+        <state relative-caret-position="-51505">
+          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/TDeptServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/config/mutildb/MySqlDataSourceConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="144" column="71" lean-forward="true" selection-start-line="144" selection-start-column="8" selection-end-line="144" selection-end-column="71" />
+        <state relative-caret-position="144">
+          <caret line="134" column="52" selection-start-line="134" selection-start-column="18" selection-end-line="134" selection-end-column="52" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/TPatientService.java">
+    <entry file="file://$PROJECT_DIR$/medical-service/src/main/java/com/bben/medical/config/mutildb/MySqlDataSourceConfig.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="66" column="8" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="8" />
+        <state relative-caret-position="353">
+          <caret line="141" column="42" lean-forward="true" selection-start-line="141" selection-start-column="42" selection-end-line="141" selection-end-column="42" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/TPatientServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="207" column="64" selection-start-line="207" selection-start-column="64" selection-end-line="207" selection-end-column="64" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/dto/HeadDto.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="13" column="30" selection-start-line="13" selection-start-column="30" selection-end-line="13" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/bben/common/constants/OperationType.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="13" selection-start-line="4" selection-start-column="3" selection-end-line="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/TNurseService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="416">
-          <caret line="63" column="8" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/TNurseServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="265">
-          <caret line="159" column="15" selection-start-line="159" selection-start-column="15" selection-end-line="159" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/constants/ReturnMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="26" column="31" selection-start-line="26" selection-start-column="31" selection-end-line="26" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/TWardService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="56" column="14" selection-start-line="56" selection-start-column="14" selection-end-line="56" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/TWardServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="545">
-          <caret line="132" column="24" selection-start-line="132" selection-start-column="24" selection-end-line="132" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/constants/HeadMethod.java">
+    <entry file="file://$PROJECT_DIR$/medical-service/src/main/java/com/bben/medical/service/BookService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
-          <caret line="17" column="31" selection-start-line="17" selection-start-column="31" selection-end-line="17" selection-end-column="31" />
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/sami/SaMiDeptController.java">
+    <entry file="file://$PROJECT_DIR$/medical-service/src/main/java/com/bben/medical/service/impl/BookServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        <state relative-caret-position="152">
+          <caret line="14" column="13" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/sami/SaMiDoctorController.java">
+    <entry file="file://$PROJECT_DIR$/medical-service/src/main/java/com/bben/medical/service/GradeService.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="24" column="28" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="28" />
+        <state relative-caret-position="76">
+          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/sami/SaMiPatientController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="54" column="30" selection-start-line="54" selection-start-column="19" selection-end-line="54" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/sami/SaMiHospitalDeptController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="18" selection-end-line="28" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/sami/SaMiNurseController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="244">
-          <caret line="38" column="28" selection-start-line="38" selection-start-column="19" selection-end-line="38" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/sami/HeadController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="422">
-          <caret line="72" column="37" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/sami/SaMiWardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="79">
-          <caret line="27" column="26" selection-start-line="27" selection-start-column="26" selection-end-line="27" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/BedCardController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="760">
-          <caret line="60" column="63" selection-start-line="60" selection-start-column="63" selection-end-line="60" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/TBedService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="52" column="17" selection-start-line="52" selection-start-column="17" selection-end-line="52" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/TBedServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2945">
-          <caret line="169" column="41" selection-start-line="169" selection-start-column="41" selection-end-line="169" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/TPatientDoctorRefService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/THospitalService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="45" column="47" selection-start-line="26" selection-start-column="4" selection-end-line="45" selection-end-column="47" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LongConnection-Service/shell/clearLongConnectionServerLog.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/LongConnection-Service/shell/startLongConnectionService.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="9" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/eureka-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="21" column="21" selection-start-line="21" selection-start-column="21" selection-end-line="21" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/gateway-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/TPatientDoctorRefServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="8" column="8" selection-start-line="8" selection-start-column="8" selection-end-line="8" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/vo/TPatientVo.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1596">
-          <caret line="95" column="31" selection-start-line="95" selection-start-column="31" selection-end-line="95" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/TBedCardService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="931">
-          <caret line="52" column="21" selection-start-line="52" selection-start-column="21" selection-end-line="52" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/TBedCardServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1254">
-          <caret line="79" column="28" selection-start-line="79" selection-start-column="28" selection-end-line="79" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/common/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1288" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/resources/application.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="11" lean-forward="true" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/bedcard-service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="18" column="21" selection-start-line="18" selection-start-column="21" selection-end-line="18" selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/repository/io/netty/netty-all/4.1.30.Final/netty-all-4.1.30.Final.jar!/io/netty/util/internal/logging/Slf4JLogger.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="80" column="5" selection-start-line="80" selection-start-column="5" selection-end-line="80" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://D:/repository/io/netty/netty-common/4.1.29.Final/netty-common-4.1.29.Final.jar!/io/netty/util/internal/logging/Slf4JLogger.class">
+    <entry file="file://$PROJECT_DIR$/medical-service/src/main/java/com/bben/medical/service/TRoleService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/bben/common/Hl7Util/HL7Helper.java">
+    <entry file="file://$PROJECT_DIR$/medical-service/src/main/java/com/bben/medical/service/impl/TRoleServiceImpl.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="12" column="13" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
+        <state relative-caret-position="163">
+          <caret line="25" column="13" selection-start-line="25" selection-start-column="13" selection-end-line="25" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LongConnection-Service/src/main/java/netty/protocol/VoiceRequest.java">
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/mapper/nurseboardservice/TBedMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="8" selection-start-column="8" selection-end-column="8" />
+        <state relative-caret-position="76">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LongConnection-Service/src/main/java/netty/protocol/RegisterResponse.java">
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/resources/mapper/nurseboardservice/TNurseLevelMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="57">
-          <caret line="3" column="7" selection-start-line="3" selection-start-column="7" selection-end-line="3" selection-end-column="7" />
+        <state relative-caret-position="-10099">
+          <caret line="10" column="22" lean-forward="true" selection-start-line="10" selection-start-column="22" selection-end-line="10" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LongConnection-Service/src/main/java/netty/handler/SendOrderClientHandler.java">
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/mapper/nurseboardservice/TNurseLevelMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="779">
-          <caret line="50" column="48" selection-start-line="50" selection-start-column="48" selection-end-line="50" selection-end-column="48" />
+        <state relative-caret-position="76">
+          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LongConnection-Service/src/main/java/netty/protocol/CancelVideoRequest.java">
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/resources/mapper/nurseboardservice/TPatientMapper.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="7" selection-start-line="2" selection-start-column="7" selection-end-line="2" selection-end-column="7" />
+        <state relative-caret-position="1741">
+          <caret line="746" column="9" selection-start-line="746" selection-start-column="9" selection-end-line="746" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/resources/mapper/nurseboardservice/TDeptMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2641">
+          <caret line="139" column="30" selection-start-line="139" selection-start-column="30" selection-end-line="139" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/resources/mapper/nurseboardservice/TBedMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-6078">
+          <caret line="30" column="28" selection-start-line="30" selection-start-column="28" selection-end-line="30" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/resources/mapper/nurseboardservice/TWardMapper.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2366">
+          <caret line="227" column="38" selection-start-line="227" selection-start-column="14" selection-end-line="227" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/controller/SocketServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="107" selection-start-line="107" selection-end-line="107" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sami-service/src/main/java/com/bben/samiservice/SamiServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/resources/generator/NurseboardserviceGeneratorConfig.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="122" column="38" selection-start-line="122" selection-start-column="30" selection-end-line="122" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/medical-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="143" column="19" selection-start-line="12" selection-start-column="4" selection-end-line="143" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="432">
+          <caret line="161" selection-start-line="161" selection-end-line="161" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/resources/application-prod.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-912" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/resources/application-test.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-608" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/model/bedcard/TAllergyType.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/model/bedcard/TBed.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/model/bedcard/TBedCardExample.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/model/bedcard/TPatient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/vo/TBedCardVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="20" column="21" selection-start-line="20" selection-start-column="10" selection-end-line="20" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/config/CacheConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2774">
+          <caret line="186" column="24" selection-start-line="186" selection-start-column="12" selection-end-line="186" selection-end-column="24" />
+          <folding>
+            <element signature="e#6588#6589#0" expanded="true" />
+            <element signature="e#6661#6662#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="437">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/TBedCardService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="11" column="17" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/config/CacheConfig.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2299">
+          <caret line="156" column="17" selection-start-line="156" selection-start-column="17" selection-end-line="156" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/TDeptService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="12" column="17" selection-start-line="12" selection-start-column="17" selection-end-line="12" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/service/impl/TDeptServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="456">
+          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/bedcard-service/src/main/java/com/bben/bedcard/controller/TDeptController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="54">
+          <caret line="99" column="68" selection-start-line="99" selection-start-column="60" selection-end-line="99" selection-end-column="68" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/model/nurseboardservice/TPatient.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="399">
+          <caret line="32" lean-forward="true" selection-start-line="32" selection-end-line="33" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/controller/NurseBoardController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="624">
+          <caret line="34" column="77" selection-start-line="34" selection-start-column="77" selection-end-line="34" selection-end-column="77" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/LongConnection-Service/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/service/NurseBoardService.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/resources/application.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="3" selection-start-line="5" selection-start-column="3" selection-end-line="5" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/NurseboardServiceApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="24" selection-start-line="24" selection-end-line="24" />
+          <folding>
+            <element signature="e#864#865#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/common/src/main/java/com/bben/common/constants/Status.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/service/impl/NurseBoardServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="140">
+          <caret line="41" column="21" selection-start-line="41" selection-start-column="21" selection-end-line="41" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/vo/NurseBoardPatientVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="422">
+          <caret line="29" column="22" selection-start-line="29" selection-start-column="22" selection-end-line="29" selection-end-column="22" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nurseboard-service/src/main/java/com/bben/nurseboardservice/vo/PatientVo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-224">
+          <caret line="20" column="19" selection-start-line="20" selection-start-column="12" selection-end-line="20" selection-end-column="19" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">

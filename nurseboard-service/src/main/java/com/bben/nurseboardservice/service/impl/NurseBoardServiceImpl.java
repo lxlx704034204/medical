@@ -78,6 +78,7 @@ public class NurseBoardServiceImpl implements NurseBoardService {
                 patientVo.setBedId(tBed.getId());
                 patientVo.setId(tPatient.getId());
                 patientVo.setName(tPatient.getName());
+                patientVo.setSex(tPatient.getSex());
                 patientVo.setBirthday(tPatient.getBirthday());
                 patientVo.setCureNo(tPatient.getCureNo());
                 if (U.isNotBlank(tPatient.getNurseLevel())){

@@ -26,6 +26,9 @@ public class PatientVo {
     @ApiModelProperty("病人姓名")
     private String name;
 
+    @ApiModelProperty("性别")
+    private Integer sex;
+
     @ApiModelProperty("出生日期")
     private Date birthday;
 
